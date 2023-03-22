@@ -1,0 +1,20 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --black:#0C0C0C;
+    --white: #FFFFFF;
+
+}
+
+body {
+    font-family: 'Cormorant Upright', serif;
+    text-align: left;
+}
+
+.container {
+    padding: 0 6.25vw;
+    min-width: 87.5vw;
+}
