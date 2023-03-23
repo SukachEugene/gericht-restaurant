@@ -31,7 +31,7 @@
                 ?>
 
                 <div class="header-elements-right-part">
-                    <button type='button'><?php echo $button_text ?></button>
+                    <button class="pointer" type="button"><?php echo $button_text ?></button>
                     <a href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>"> <?php echo  $link['title']; ?> </a>
                 </div>
 
