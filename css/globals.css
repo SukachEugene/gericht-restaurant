@@ -1,20 +1,52 @@
 
+
 html {
     scroll-behavior: smooth;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
 }
 
 :root {
     --black:#0C0C0C;
+    --other_black: #0C0B08;
     --white: #FFFFFF;
+    --gold: #DCCA87;
+    --grey: #AAAAAA;
+    --cormorant: 'Cormorant Upright', serif;
+    --sans: 'Open Sans', sans-serif;
 
 }
 
 body {
-    font-family: 'Cormorant Upright', serif;
+    font-family: var(--cormorant);
     text-align: left;
+    background-color: var(--black);
+    color: var(--white);
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+
 }
 
 .container {
     padding: 0 6.25vw;
     min-width: 87.5vw;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.sans {
+    font-family: var(--sans);
+}
+
+.spoon {
+    width: 40px;
 }
