@@ -1,13 +1,13 @@
 
 .section-head-posts {
     position: relative;;
-    max-height: min-content;
+    /* max-height: 100vh; */
     width: 100%;
     padding-top: 48px;
     /* padding-bottom: 152px; */
 
 
-    background-color: grey;
+    background-color: rgb(191, 223, 187);
 }
 
 .section-head-posts-content {
@@ -119,7 +119,7 @@
     z-index: 2;
 }
 
-.scroll-link {
+/* .scroll-link {
     position: absolute;
     width: min-content;
     display: flex;
@@ -147,4 +147,10 @@
 
     
     margin-top: -150px;
+} */
+
+
+.slick-dots {
+    color: red !important;
+    z-index: 1000000;
 }

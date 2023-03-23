@@ -68,10 +68,10 @@ get_header()
 
     </div>
 
-    <a class="scroll-link down" href="#about-us">
+    <!-- <a class="scroll-link down" href="#about-us">
         <img src="<?php echo $scroll['url']; ?>" alt="<?php echo $scroll['alt']; ?>" title="<?php echo $scroll['title']; ?>">
         <p>SCROLL</p>
-    </a>
+    </a> -->
 
 </section>
 
