@@ -135,7 +135,7 @@ get_header()
                 <button class="scroll-button pointer" id="scroll-down" type="button">
                     <img src="<?php echo $scroll['url']; ?>" alt="<?php echo $scroll['alt']; ?>" title="<?php echo $scroll['title']; ?>">
                     <p>SCROLL</p>
-            </button>
+                </button>
             <?php endif ?>
 
         </div>
@@ -214,11 +214,11 @@ $logo = get_field('logo', 'options');
 
 </section>
 
-<section class="section-reservations">
-    <div class="container">
 
-    </div>
-</section>
+
+<?php get_template_part('templates/block', 'reservations'); ?>
+
+
 
 
 <?php

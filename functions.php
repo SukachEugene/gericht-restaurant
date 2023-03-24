@@ -17,6 +17,7 @@ function my_theme_enqueue_files(){
 	wp_enqueue_style('slick-theme-css', get_theme_file_uri() .'/css/slick-theme.css');
   wp_enqueue_style( 'header', get_template_directory_uri().'/css/header.css');
   wp_enqueue_style( 'front-page', get_template_directory_uri().'/css/front-page.css');
+  wp_enqueue_style( 'block-reservations', get_template_directory_uri().'/css/block-reservations.css');
 
   // main theme's style file
   wp_enqueue_style( 'style', get_stylesheet_uri() );
