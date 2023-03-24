@@ -1,0 +1,131 @@
+
+
+.section-reservations {
+    display: flex;
+    justify-content: center; 
+}
+
+.section-reservations h6 {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+}
+
+.section-reservations .spoon {
+    padding: 8px 0;
+}
+
+.template-reservation-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 152px 0;
+}
+
+.template-reservation-content {
+    width: 71vw;
+    padding: 48px 1.67vw 23px 1.67vw;
+    background-color: var(--form-black);
+
+    border: 1px solid rgba(220, 202, 135, 0.2);
+    box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.7);
+}
+
+.template-reservation-content-form {
+    margin-top: 60px;
+}
+
+.nf-form-fields-required {
+    display: none;
+}
+
+.nf-field-label label {
+    display: none;
+}
+
+.section-reservations .nf-field-element {
+    width: 21.46vw !important;
+    /* height: 32px; */
+    
+}
+
+.section-reservations .ninja-forms-field {
+    background-color: #0C0C0C !important;
+    border: 1px solid #F5EFDB !important;
+    font-family: var(--cormorant);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+}
+
+.section-reservations .ninja-forms-field {
+    color: var(--grey) !important;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    appearance: none !important;
+    background-image: url("../images/arrow.svg") !important;
+    background-repeat: no-repeat !important;
+    background-position: 95% center !important;
+    background-size: 13px 8px !important;
+}
+
+.section-reservations .ninja-forms-field option {
+    color: var(--white);
+    font-feature-settings: 'tnum' on, 'lnum' on !important; 
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+}
+
+.flatpickr-calendar {
+    background-color: var(--gold) !important;
+    border: none !important;
+}
+
+.flatpickr-day.today.selected, .flatpickr-day.selected {
+    background-color: black !important;
+    border: 2px solid black !important;
+}
+
+.flatpickr-day.today {
+    border: 2px solid black !important;
+}
+
+#nf-field-8-wrap {
+    justify-content: center;
+}
+
+#nf-field-8 {
+    padding: 8px 1.67vw;
+    min-width: 133px;
+    margin-top: 39px;
+    color: var(--form_black) !important;
+    background-color: var(--gold) !important;
+    border: none !important;
+    font-family: var(--cormorant) !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 28px !important;
+    letter-spacing: 0.04em !important;
+    background-image: none !important;
+    cursor: pointer;
+    transition: none !important;
+}
+
+#nf-field-8:hover {
+    background-color: var(--darkgold) !important;
+    color: var(--white) !important;
+}
+
+.nf-response-msg {
+    margin-bottom: 30px;
+    margin-top: -30px;
+}
+
+.template-reservation-content-form {
+    margin-bottom: 30px;
+}
