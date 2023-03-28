@@ -1,6 +1,10 @@
 
 
-window.onload = addEventListeners;
+window.onload = function(){
+  addEventListeners();
+  fixDownloadOfSliderOne();
+  makeVideoControlButton();
+}
 
 function addEventListeners() {
   document.getElementById('scroll-down').addEventListener('click', scrollDown, false);
@@ -9,22 +13,22 @@ function addEventListeners() {
 }
 
 function scrollDown() {
-    let headerHeight = document.getElementById('header').offsetHeight;
-    window.scrollTo(0, window.innerHeight - headerHeight);
+  let headerHeight = document.getElementById('header').offsetHeight;
+  window.scrollTo(0, window.innerHeight - headerHeight);
 }
 
-function addEventLictenerToClass (listener, className, functionName, boolean) {
+function addEventLictenerToClass(listener, className, functionName, boolean) {
   let list = document.getElementsByClassName(className);
   for (i = 0; i < list.length; i++) {
     list[i].addEventListener(listener, functionName, boolean);
   }
 }
 
-function removeClassByClassList (className, removeClass) {
+function removeClassByClassList(className, removeClass) {
   let list = document.getElementsByClassName(className);
   for (i = 0; i < list.length; i++) {
     if (list[i].classList.contains(removeClass)) {
-    list[i].classList.remove(removeClass);
+      list[i].classList.remove(removeClass);
     }
   }
 }
@@ -33,7 +37,7 @@ function getPositionOfElementInArray(className, element) {
   let list = document.getElementsByClassName(className);
   for (i = 0; i < list.length; i++) {
     if (list[i] == element) {
-    return i
+      return i
     }
   }
 }
@@ -44,9 +48,9 @@ function addClassToElementOnPosition(className, position, addClass) {
 }
 
 function menuFilter(e) {
-  removeClassByClassList('menu-filter','active');
-  removeClassByClassList('menu-banner','active');
-  removeClassByClassList('menu-details-container-positions','active');
+  removeClassByClassList('menu-filter', 'active');
+  removeClassByClassList('menu-banner', 'active');
+  removeClassByClassList('menu-details-container-positions', 'active');
 
   element = e.target;
   element.classList.add('active');
@@ -59,8 +63,6 @@ function menuFilter(e) {
 
 
 // fix vith visibility of hidden slides in page download's moment
-window.onload = fixDownloadOfSliderOne
-
 function fixDownloadOfSliderOne() {
   let list = document.getElementsByClassName('slider-one');
 
@@ -71,6 +73,36 @@ function fixDownloadOfSliderOne() {
 }
 
 
+
+// // video banner mechanic
+function makeVideoControlButton() {
+
+  let video = document.getElementById("video-banner");
+  let playButton = document.getElementById("play-video-banner-button");
+
+  playButton.addEventListener("click", function () {
+    video.play();
+    video.controls = true;
+    playButton.style.display = "none";
+  });
+
+  video.addEventListener("play", function () {
+    video.controls = true;
+    playButton.style.display = "none";
+  });
+
+  video.addEventListener("pause", function () {
+    video.controls = false;
+    playButton.style.display = "block";
+  });
+
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        video.pause();
+    }
+});
+
+}
 
 
 

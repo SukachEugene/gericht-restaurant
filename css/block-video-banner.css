@@ -1,0 +1,27 @@
+#video-banner {
+    width: 100%;
+    height: calc(100vh - var(--header_height));
+    object-fit: cover;
+}
+
+.section-video-banner {
+    position: relative;
+    z-index: 1;
+}
+
+#play-video-banner-button {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: 1s;
+}
+
+#play-video-banner-button:hover {
+    transform: translate(-50%, -50%) scale(1.15);
+}
+
