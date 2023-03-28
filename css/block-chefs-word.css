@@ -1,0 +1,107 @@
+.section-chefs-word {
+    background-size: cover;
+    padding: 128px 0;
+}
+
+.section-chefs-word-content {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    column-gap: 5vw;
+}
+
+.section-chefs-word-content-image-container {
+    position: relative;
+    width: 33vw;
+    height: fit-content;
+}
+
+
+.section-chefs-word-content-frame.left-frame {
+    position: absolute;
+    bottom: 0;
+    max-width: 70%;
+}
+
+.section-chefs-word-content-frame.right-frame {
+    position: absolute;
+    right: 0;
+    max-width: 70%;
+}
+
+.section-chefs-word-content-image {
+    position: relative;
+    padding: 1.25vw;
+    width: calc(100% - 1.25vw - 1.25vw);
+    height: auto;
+}
+
+.section-chefs-word-content-text-container {
+    width: 30vw;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-chefs-word-content-text-container .spoon {
+    padding: 8px 0;
+}
+
+.section-chefs-word-content-text-container h2 {
+    padding-top: 8px;
+    padding-bottom: 64px;
+}
+
+.section-chefs-word-content-text-container p {
+    text-indent: 55px;
+    font-family: var(--sans);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: var(--grey);
+}
+
+.section-chefs-word-content-text-container-quote {
+    position: relative;
+}
+
+.section-chefs-word-content-text-container-quote .quotes {
+    position: absolute;
+    top: -16px;
+}
+
+.section-chefs-word-content-text-container h4 {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: var(--gold);
+    padding-top: 64px;
+    padding-bottom: 8px;
+}
+
+.section-chefs-word-content-text-container h5 {
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: var(--grey);
+    margin-bottom: 64px;
+} 
+
+.section-chefs-word-caption {
+    width: 12.2vw;
+}
+
+.section-chefs-word .logo {
+position: absolute;
+/* bottom: -15%; */
+right: 0;
+margin-right: 7.8vw;
+}

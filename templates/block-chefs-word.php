@@ -1,11 +1,15 @@
-<section class="section-chefs-word">
+<?php
+$background = get_field('chefs_word_background', 'options');
+?>
+
+<section class="section-chefs-word" style="background-image: url('<?php echo $background['url']; ?>')">
     <div class="container">
 
         <?php
         $chef = get_posts(array(
             'post_type' => 'our-team',
             'posts_per_page' => 1,
-            'order' => 'ASC',
+            'order' => 'DSC',
             'meta_key' => 'team_view_on_page',
             'meta_query' => array(
                 array(
@@ -56,20 +60,40 @@
                     <h2><?php echo $title ?></h2>
                 <?php endif ?>
 
-                <?php if ($quotes) : ?>
-                    <img src="<?php echo $quotes['url']; ?>" alt="<?php echo $quotes['alt']; ?>" title="<?php echo $quotes['title']; ?>">
+                <div class="section-chefs-word-content-text-container-quote">
+                    <?php if ($quotes) : ?>
+                        <img class="quotes" src="<?php echo $quotes['url']; ?>" alt="<?php echo $quotes['alt']; ?>" title="<?php echo $quotes['title']; ?>">
+                    <?php endif; ?>
+
+                    <?php if ($text) : ?>
+                        <p><?php echo $text ?></p>
+                    <?php endif ?>
+                </div>
+
+                <?php if ($name) : ?>
+                    <h4><?php echo $name ?></h4>
+                <?php endif ?>
+
+                <?php if ($position) : ?>
+                    <h5><?php echo $position ?></h5>
+                <?php endif ?>
+
+                <?php if ($caption) : ?>
+                    <img class="section-chefs-word-caption" src="<?php echo $caption['url']; ?>" alt="<?php echo $caption['alt']; ?>" title="<?php echo $qcaption['title']; ?>">
                 <?php endif; ?>
 
-                <?php if ($text) : ?>
-                    <p><?php echo $text ?></p>
-                <?php endif ?>
 
             </div>
 
-
-
         </div>
 
-
     </div>
+
+    <?php
+    $logo = get_field('logo', 'options');
+    if ($logo) :
+    ?>
+        <img class="logo" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" title="<?php echo $logo['title']; ?>">
+    <?php endif ?>
+
 </section>
