@@ -58,3 +58,20 @@ function menuFilter(e) {
 
 
 
+// fix vith visibility of hidden slides in page download's moment
+window.onload = fixDownloadOfSliderOne
+
+function fixDownloadOfSliderOne() {
+  let list = document.getElementsByClassName('slider-one');
+
+  for (i = 0; i < list.length; i++) {
+    list[i].style.opacity = '1';
+    list[i].style.visibility = 'visible';
+  }
+}
+
+
+
+
+
+
