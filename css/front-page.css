@@ -128,13 +128,13 @@ h2 {
     height: 22.6vw;
 }
 
-.left-frame {
+.section-head-posts-content-frame.left-frame {
     bottom: 0;
     margin-bottom: -1.25vw;
     margin-left: -1.25vw;
 }
 
-.right-frame {
+.section-head-posts-content-frame.right-frame {
     margin-left: 10.65vw;
     margin-top: -1.25vw;
 }
@@ -296,10 +296,6 @@ h2 {
     right: 0;
     margin-right: 7.8vw;
 }
-
-
-
-
 
 
 
