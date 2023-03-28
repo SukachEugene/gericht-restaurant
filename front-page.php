@@ -219,6 +219,12 @@ $logo = get_field('logo', 'options');
 <?php get_template_part('templates/block', 'reservations'); ?>
 
 
+<?php get_template_part('templates/block', 'menu'); ?>
+
+<?php get_template_part('templates/block', 'chefs-word'); ?>
+
+
+
 
 
 <?php

@@ -11,7 +11,9 @@
                 $title = get_field('reservation_form_title', 'options');
                 ?>
 
-                <h6><?php echo $header ?></h6>
+                <?php if ($header) : ?>
+                    <h6><?php echo $header ?></h6>
+                <?php endif ?>
 
                 <?php if ($spoon) : ?>
                     <img class="spoon" src="<?php echo $spoon['url']; ?>" alt="<?php echo $spoon['alt']; ?>" title="<?php echo $spoon['title']; ?>">
@@ -19,8 +21,9 @@
                 endif;
                 ?>
 
-                <h2><?php echo $title ?></h2>
-
+                <?php if ($title) : ?>
+                    <h2><?php echo $title ?></h2>
+                <?php endif ?>
 
                 <div class="template-reservation-content-form">
                     <?php
@@ -33,5 +36,3 @@
         </div>
     </div>
 </section>
-
-</div>
