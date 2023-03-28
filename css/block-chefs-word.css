@@ -100,8 +100,8 @@
 }
 
 .section-chefs-word .logo {
-position: absolute;
-/* bottom: -15%; */
-right: 0;
-margin-right: 7.8vw;
+    position: absolute;
+    margin-top: 4.8vw;
+    right: 0;
+    margin-right: 7.8vw;
 }
