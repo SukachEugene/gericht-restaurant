@@ -223,6 +223,8 @@ $logo = get_field('logo', 'options');
 
 <?php get_template_part('templates/block', 'customers'); ?>
 
+<?php get_template_part('templates/block', 'video'); ?>
+
 
 
 

@@ -235,6 +235,12 @@ h6 {
 }
 
 
+.slider-one {
+   opacity: 0;
+   visibility: hidden;
+}
+
+
 
 /* ----------------- Section Knife ----------------- */
 
