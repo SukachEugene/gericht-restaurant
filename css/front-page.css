@@ -9,6 +9,16 @@ h2 {
     color: var(--gold);
 }
 
+h6 {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: var(--white);
+}
+
 
 .gold-button {
     display: inline-block;
@@ -32,6 +42,8 @@ h2 {
 .logo {
     width: 7.5vw;
     height: 7.5vw;
+    min-width: 100px;
+    min-height: 100px;
 }
 
 
@@ -292,7 +304,7 @@ h2 {
 
 .section-knife .logo {
     position: absolute;
-    bottom: -15%;
+    bottom: -6vw;
     right: 0;
     margin-right: 7.8vw;
 }

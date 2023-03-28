@@ -10,8 +10,10 @@ get_header()
 
         <?php
 
-        $title_words_count = get_field('header_slides_title_words_count');
-        $content_words_count = get_field('header_slides_content_words_count');
+        // $title_words_count = get_field('header_slides_title_words_count');
+        // $content_words_count = get_field('header_slides_content_words_count');
+        $title_characters_count = get_field('header_slides_title_characters_count');
+        $content_characters_count = get_field('header_slides_content_characters_count');
 
         $head_posts = get_posts(array(
             'post_type' => 'front-page-head-post',
@@ -68,20 +70,17 @@ get_header()
                                     endif;
                                     ?>
                                     <?php if ($title) :
-                                        $words = explode(' ', $title);
 
-                                        if ($title_words_count && count($words) > $title_words_count) {
-                                            $title = implode(' ', array_slice($words, 0, $title_words_count));
+                                        if ($title_characters_count && mb_strlen($title) > $title_characters_count) {
+                                            $title = mb_substr($title, 0, $title_characters_count) . '...';
                                         }
 
                                     ?>
                                         <h1><?php echo $title; ?> </h1>
                                     <?php endif ?>
                                     <?php if ($content) :
-                                        $words = explode(' ', $content);
-
-                                        if ($content_words_count && count($words) > $content_words_count) {
-                                            $content = implode(' ', array_slice($words, 0, $content_words_count)) . '...';
+                                        if ($content_characters_count && mb_strlen($content) > $content_characters_count) {
+                                            $content = mb_substr($content, 0, $content_characters_count) . '...';
                                         }
                                     ?>
                                         <p class="section-head-posts-content-text sans"><?php echo $content ?></p>
@@ -218,10 +217,11 @@ $logo = get_field('logo', 'options');
 
 <?php get_template_part('templates/block', 'reservations'); ?>
 
-
 <?php get_template_part('templates/block', 'menu'); ?>
 
 <?php get_template_part('templates/block', 'chefs-word'); ?>
+
+<?php get_template_part('templates/block', 'customers'); ?>
 
 
 

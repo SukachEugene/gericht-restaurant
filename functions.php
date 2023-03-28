@@ -21,6 +21,7 @@ function my_theme_enqueue_files()
   wp_enqueue_style('block-reservations', get_template_directory_uri() . '/css/block-reservations.css');
   wp_enqueue_style('block-menu', get_template_directory_uri() . '/css/block-menu.css');
   wp_enqueue_style('block-chefs-word', get_template_directory_uri() . '/css/block-chefs-word.css');
+  wp_enqueue_style('block-customers', get_template_directory_uri() . '/css/block-customers.css');
 
   // main theme's style file
   wp_enqueue_style('style', get_stylesheet_uri());
