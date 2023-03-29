@@ -122,8 +122,16 @@
 }
 
 .nf-response-msg {
-    margin-bottom: 30px;
-    margin-top: -30px;
+    position: relative;
+    /* margin-bottom: 30px;
+    margin-top: -30px; */
+}
+
+.nf-response-msg p {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .template-reservation-content-form {
