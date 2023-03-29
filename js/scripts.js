@@ -1,6 +1,6 @@
 
 
-window.onload = function(){
+window.onload = function () {
   addEventListeners();
   fixDownloadOfSliderOne();
   makeVideoControlButton();
@@ -79,28 +79,36 @@ function makeVideoControlButton() {
 
   let video = document.getElementById("video-banner");
   let playButton = document.getElementById("play-video-banner-button");
+  let logo = document.getElementById("section-video-logo");
 
   playButton.addEventListener("click", function () {
+
     video.play();
-    video.controls = true;
+
     playButton.style.display = "none";
+    logo.style.display = "none";
   });
 
   video.addEventListener("play", function () {
-    video.controls = true;
     playButton.style.display = "none";
   });
 
   video.addEventListener("pause", function () {
-    video.controls = false;
     playButton.style.display = "block";
+    logo.style.display = "block";
   });
 
-  document.addEventListener("keydown", function(event) {
+  document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
-        video.pause();
+      video.pause();
     }
-});
+  });
+
+  video.addEventListener("click", function () {
+    if (!video.paused) {
+      video.pause();
+    }
+  });
 
 }
 
