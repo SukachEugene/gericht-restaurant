@@ -1,5 +1,13 @@
 <section class="section-video-banner">
 
+    <?php
+    $logo = get_field('logo', 'options');
+    ?>
+
+    <?php if ($logo) : ?>
+        <img class="logo" id="section-video-logo" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" title="<?php echo $logo['title']; ?>">
+    <?php endif ?>
+
     <video loop id="video-banner">
         <source src="<?php echo get_theme_file_uri('/videos/video2.mp4'); ?>" type="video/mp4">
     </video>
