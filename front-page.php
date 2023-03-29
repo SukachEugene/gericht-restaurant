@@ -308,6 +308,86 @@ $background = get_field('our_laurels_background_image');
     </div>
 </section>
 
+<section class="section-blogs">
+
+    <div class="container">
+
+        <div class="section-blogs-content">
+
+            <div class="section-blogs-content-head">
+
+                <?php
+                $header = get_field('blogs_header');
+                $spoon = get_field('spoon', 'options');
+                $title = get_field('blogs_title');
+                ?>
+
+                <?php if ($header) : ?>
+                    <h6><?php echo $header ?></h6>
+                <?php endif ?>
+
+                <?php if ($spoon) : ?>
+                    <img class="spoon" src="<?php echo $spoon['url']; ?>" alt="<?php echo $spoon['alt']; ?>" title="<?php echo $spoon['title']; ?>">
+                <?php endif; ?>
+
+                <?php if ($title) : ?>
+                    <h2><?php echo $title ?></h2>
+                <?php endif ?>
+            </div>
+
+            <div class="section-blogs-content-posts-container">
+
+                <?php
+                $posts = get_posts(array(
+                    'post_type' => 'post',
+                    'order' => 'ASC',
+                    'posts_per_page' => 3,
+                ));
+
+                if ($posts) :
+
+                    foreach ($posts as $post) :
+                        $id = $post->ID;
+                        $thumbnail = get_the_post_thumbnail($id);
+                        $date = get_the_date('d M Y', $id);
+                        $authorID = $post->post_author;
+                        $author = get_the_author_meta('display_name', $authorID);
+                        $title = $post->post_title;
+                        $content = $post->post_content;
+                        $link = get_the_permalink($id);
+                ?>
+                        <?php if ($thumbnail) : ?>
+
+                            <div class="section-blogs-content-post">
+
+                                <div class="section-blogs-image-container">
+                                    <?php echo $thumbnail ?>
+                                </div>
+                                <div>
+                                    <p><?php echo $date ?></p>
+                                    <p><?php echo $author ?></p>
+                                    <p><?php echo $title ?></p>
+                                    <p><?php echo $content ?></p>
+                                    <a href="<?php echo $link ?>">Read more</a>
+                                </div>
+
+                            </div>
+
+                        <?php endif; ?>
+
+                <?php
+                    endforeach;
+                endif;
+                ?>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
 
 
 
