@@ -1,0 +1,229 @@
+
+footer {
+    overflow: hidden;
+    background-size: cover;
+    
+}
+
+
+.footer-container {
+    padding: 0 16vw;
+    min-width: 68vw;
+}
+
+.subscribe-container {
+    background-color: var(--black);
+    padding: 64px 13vw;
+    text-align: center;
+
+    border: 1px solid rgba(220, 202, 135, 0.2);
+    box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.7);
+}
+
+footer h6 {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+}
+
+footer .spoon {
+    margin: 8px 0;
+}
+
+footer h2 {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    padding-bottom: 24px;
+}
+
+footer p {
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+}
+
+.subscribe-form {
+    margin-top: 64px;
+}
+
+.subscribe-form-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.7vw;
+}
+
+
+.subscribe-form-email-input {
+    width: 33vw;
+    height: 60px;
+    padding: 16px 1vw;
+
+    font-family: var(--cormorant);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: var(--grey);
+    background-color: var(--black);
+    border: 1px solid var(--lightgold);
+
+    position: relative;
+}
+
+.subscribe-form-email-input:focus {
+    outline: 2px solid var(--gold);
+}
+
+.subscribe-submit {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: var(--black);
+    padding: 8px 1.7vw;
+    background-color: var(--gold);
+    cursor: pointer;
+    border: none;
+    position: relative;
+
+}
+
+.subscribe-submit:hover {
+    background-color: var(--darkgold);
+    color: var(--white);
+}
+
+.wpcf7-response-output {
+    display: none;
+}
+
+.wpcf7-spinner {
+    position: absolute;
+    margin-top: 8px;
+}
+
+.wpcf7-not-valid-tip {
+    position: absolute;
+    left:50%;
+    margin-top: 10px;
+    transform: translateX(-50%);
+    font-family: var(--cormorant);
+    font-size: 26px;
+}
+
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 128px;
+}
+
+.bottom-container-element {
+    width: 25%;
+    text-align: center;
+}
+
+.bottom-container-element.central-element {
+    width: 35%;
+}
+
+.bottom-container-element.edge-element {
+    padding-top: 25px;
+}
+
+footer h5 {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: var(--lightgold);
+    padding-bottom: 24px;
+}
+
+.footer-text-style {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: var(--grey);
+}
+
+.bottom-container-element a {
+    font-family: var(--sans);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: var(--grey);
+    text-decoration: none;
+}
+
+.bottom-container-element a:hover {
+    color: var(--white);
+}
+
+.footer-copyright-container {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 144px;
+}
+
+.footer-text-style.separate-element {
+    margin-bottom: 8px;
+}
+
+.bottom-container h2 {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding-bottom: 32px;
+}
+
+.bottom-container-element .spoon {
+    margin: 16px 0;
+}
+
+.social-media.icon {
+    font-size: 20px;
+    color: var(--white);
+}
+
+.social-media.icon:hover {
+    color: var(--grey);
+}
+
+.social-media-container {
+    display: flex;
+    justify-content: center;
+    column-gap: 0.85vw;
+}
+
+.footer-container {
+    position: relative;
+}
+
+.footer-background {
+    position: absolute;
+    height: 80%;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
