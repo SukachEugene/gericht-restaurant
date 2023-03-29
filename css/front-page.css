@@ -286,8 +286,6 @@ h6 {
     text-align: right;
 }
 
-.section-knife-content-text-container {}
-
 .section-knife-content-text-container .spoon {
     padding-top: 8px;
     padding-bottom: 32px;
@@ -314,6 +312,122 @@ h6 {
     right: 0;
     margin-right: 7.8vw;
 }
+
+
+
+
+/* ----------------- Section Laurels ----------------- */
+
+.section-laurels {
+    background-size: cover;
+    margin-bottom: 152px;
+}
+
+.section-laurels-container {
+    padding: 128px 16vw;
+    min-width: 68vw;
+}
+
+.section-laurels-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 3vw;
+}
+
+.section-laurels-content-left-part .spoon {
+    padding: 8px 0;
+}
+
+.section-laurels-content-left-part h2 {
+    padding-bottom: 64px;
+}
+
+.section-laurels-goals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.7vw;
+    row-gap: 64px;
+}
+
+.section-laurels-goals-element {
+    display: flex;
+    position: relative;
+}
+
+.section-laurels-goals-element h4 {
+    font-family: var(--cormorant);
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: var(--gold);
+}
+
+.section-laurels-goals-element p {
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: var(--grey);
+}
+
+.section-laurels-goals-element .laurel-number {
+    font-size: 30px;
+    line-height: 100%;
+    font-family: var(--cormorant);
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    text-align: center;
+    width: 4.2vw;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 4.2vw;
+    height: auto;
+    transform: translateY(-50%);
+}
+
+.laurel-image {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 4.2vw;
+    height: auto;
+    transform: translateY(-50%);
+}
+
+.section-laurels-goals-element-image-container {
+    width: 4.2vw;
+    padding-right: 2.2vw;
+}
+
+.section-laurels-content-right-part {
+    padding-left: 3.75vw;
+    width: 49%;
+    position: relative;
+    text-align: right;
+}
+
+.section-laurels-content-right-part .image {
+    height: auto;
+    max-height: 70vh;
+    width: 100%;
+    max-width: 100%;
+}
+
+.section-laurels-content-right-part .letter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 55%;
+}
+
+
+
 
 
 

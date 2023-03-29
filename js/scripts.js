@@ -83,19 +83,34 @@ function makeVideoControlButton() {
 
   playButton.addEventListener("click", function () {
 
+    
     video.play();
+    
 
-    playButton.style.display = "none";
-    logo.style.display = "none";
+    playButton.style.opacity = "1";
+    logo.style.opacity = "0";
   });
 
   video.addEventListener("play", function () {
-    playButton.style.display = "none";
+    playButton.style.opacity = "0";
+    playButton.style.zIndex = "-1";
+    video.style.cursor = "pointer"
   });
 
   video.addEventListener("pause", function () {
-    playButton.style.display = "block";
-    logo.style.display = "block";
+    playButton.style.opacity = "1";
+    playButton.style.zIndex = "2";
+    video.style.cursor = "auto"
+    logo.style.opacity = "1";
+    
+    logo.addEventListener('mouseover',function(){
+      logo.style.opacity = "0";
+    })
+
+    logo.addEventListener('mouseout',function(){
+      logo.style.opacity = "1";
+    })
+   
   });
 
   document.addEventListener("keydown", function (event) {
