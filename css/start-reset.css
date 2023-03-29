@@ -49,5 +49,14 @@ table {
 
 
 
+/* Fix for form's elements */
+input, select, textarea {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+
+
 
 
