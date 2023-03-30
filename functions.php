@@ -13,6 +13,7 @@ function my_theme_enqueue_files()
   //basic styles
   wp_enqueue_style('start-reset', get_template_directory_uri() . '/css/start-reset.css');
   wp_enqueue_style('globals', get_template_directory_uri() . '/css/globals.css');
+
   // elements styles
   wp_enqueue_style('slick-css', get_theme_file_uri() . '/css/slick.css');
   wp_enqueue_style('slick-theme-css', get_theme_file_uri() . '/css/slick-theme.css');
@@ -24,6 +25,8 @@ function my_theme_enqueue_files()
   wp_enqueue_style('block-chefs-word', get_template_directory_uri() . '/css/block-chefs-word.css');
   wp_enqueue_style('block-customers', get_template_directory_uri() . '/css/block-customers.css');
   wp_enqueue_style('block-video-banner', get_template_directory_uri() . '/css/block-video-banner.css');
+  wp_enqueue_style('block-blog-posts', get_template_directory_uri() . '/css/block-blog-posts.css');
+  wp_enqueue_style('block-gallery', get_template_directory_uri() . '/css/block-gallery.css');
 
   // main theme's style file
   wp_enqueue_style('style', get_stylesheet_uri());
@@ -33,9 +36,17 @@ function my_theme_enqueue_files()
   wp_enqueue_script('slick-min-js', get_theme_file_uri() . '/js/slick.min.js');
   wp_enqueue_script('font-awesome-kit', 'https://kit.fontawesome.com/3f554732dc.js', [], null);
 
+  //custom ajax script file, decision for connect from: https://webdeasy.de/en/ajax-in-wordpress-en/
+  wp_enqueue_script("ajax-scripts", get_template_directory_uri() . "/js/ajax-scripts.js");
+
   // custom scripts files
   wp_enqueue_script('jquery-scripts', get_template_directory_uri() . '/js/jquery-scripts.js');
   wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js');
+
+  
+  wp_localize_script("ajax-scripts", "PHPVARS", array(
+    "ajaxurl" => admin_url("admin-ajax.php"),
+  ));
 }
 
 
@@ -163,21 +174,21 @@ function admin_enqueue_scripts_callback()
 
 
 
-add_action( 'create_term', 'custom_create_term_callback' );
-function custom_create_term_callback($term_id) {
- 
-    add_term_meta( 
-        $term_id, 
-        'category_banner',   
-        esc_url($_REQUEST['category_custom_banner_url'])
-    );
+add_action('create_term', 'custom_create_term_callback');
+function custom_create_term_callback($term_id)
+{
 
-    add_term_meta( 
-        $term_id, 
-        'category_image',   
-        esc_url($_REQUEST['category_custom_image_url'])
-    );
+  add_term_meta(
+    $term_id,
+    'category_banner',
+    esc_url($_REQUEST['category_custom_banner_url'])
+  );
 
+  add_term_meta(
+    $term_id,
+    'category_image',
+    esc_url($_REQUEST['category_custom_image_url'])
+  );
 }
 
 
@@ -268,20 +279,57 @@ function edit_term_callback($term_id)
     );
 
 
-    $image = '';
-    $image = get_term_meta($term_id, 'term_image');
-  
-    if ($image)
-      update_term_meta(
-        $term_id,
-        'term_image',
-        esc_url($_POST['category_custom_image_url'])
-      );
-  
-    else
-      add_term_meta(
-        $term_id,
-        'term_image',
-        esc_url($_POST['category_custom_image_url'])
-      );
+  $image = '';
+  $image = get_term_meta($term_id, 'term_image');
+
+  if ($image)
+    update_term_meta(
+      $term_id,
+      'term_image',
+      esc_url($_POST['category_custom_image_url'])
+    );
+
+  else
+    add_term_meta(
+      $term_id,
+      'term_image',
+      esc_url($_POST['category_custom_image_url'])
+    );
+}
+
+
+
+
+
+// Loads blog posts on front page by Ajax
+add_action('wp_ajax_load_more_posts', 'load_more_posts');
+add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts');
+
+function load_more_posts()
+{
+  $paged = $_POST['page'];
+  $posts = get_posts(array(
+    'post_type' => 'post',
+    'order' => 'ASC',
+    'posts_per_page' => 3,
+    'paged' => $paged,
+
+  ));
+
+  $response = array();
+
+  if ($paged > count($posts)) {
+    $response['finish'] = true;
+  } else {
+    $response['finish'] = false;
+  }
+
+  if ($posts) {
+    ob_start();
+
+    get_template_part('templates/block', 'blog-posts');
+
+    $response['html'] = ob_get_clean();
+  } 
+  wp_send_json($response);
 }

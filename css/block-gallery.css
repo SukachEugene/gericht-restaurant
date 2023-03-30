@@ -1,0 +1,9 @@
+.test {
+    margin-left: 500px;
+    margin-right: -200px;
+    overflow: hidden;
+}
+
+.insta-gallery-icon.qligg-icon-instagram {
+    font-size: 45px !important;
+}
