@@ -335,58 +335,16 @@ $background = get_field('our_laurels_background_image');
                 <?php endif ?>
             </div>
 
-            <div class="section-blogs-content-posts-container">
+            <div class="section-blogs-content-posts-container" id="posts-container">
 
-                <?php
-                $posts = get_posts(array(
-                    'post_type' => 'post',
-                    'order' => 'ASC',
-                    'posts_per_page' => 3,
-                ));
-
-                if ($posts) :
-
-                    foreach ($posts as $post) :
-                        $id = $post->ID;
-                        $thumbnail = get_the_post_thumbnail($id);
-                        $date = get_the_date('d M Y', $id);
-                        $authorID = $post->post_author;
-                        $author = get_the_author_meta('display_name', $authorID);
-                        $title = $post->post_title;
-                        $content = $post->post_content;
-                        $link = get_the_permalink($id);
-                ?>
-                        <?php if ($thumbnail) : ?>
-
-                            <div class="section-blogs-content-post">
-
-                                <div class="section-blogs-image-container">
-                                    <?php echo $thumbnail ?>
-                                </div>
-                                <div class="section-blogs-text-container">
-                                    <div class="section-blogs-text-container-datatime-row">
-                                        <p><?php echo $date ?></p>
-                                        <p><?php echo " - " . $author ?></p>
-                                    </div>
-                                    <h4><?php echo $title ?></h4>
-                                    <p class="content-text"><?php echo $content ?></p>
-                                    <a href="<?php echo $link ?>">Read more</a>
-                                </div>
-
-                            </div>
-
-                        <?php endif; ?>
-
-                <?php
-                    endforeach;
-                endif;
-                ?>
-
+            <?php get_template_part('templates/block', 'blog-posts'); ?>
 
             </div>
+
             <div class="section-blogs-button-container">
-                <button class="gold-button">View More</button>
+                <button class="gold-button" id="load-more-posts">View More</button>
             </div>
+
         </div>
 
     </div>
@@ -394,7 +352,7 @@ $background = get_field('our_laurels_background_image');
 </section>
 
 
-
+<?php get_template_part('templates/block', 'gallery'); ?>
 
 
 

@@ -1,0 +1,120 @@
+
+
+.section-blogs .container {
+    display: flex;
+    justify-content: center;
+}
+
+.section-blogs-content {
+    width: 68vw;
+}
+
+.section-blogs-content-head {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.section-blogs-content-head .spoon {
+    padding: 8px 0;
+}
+
+.section-blogs-content-head h2 {
+    text-transform: capitalize;
+}
+
+.section-blogs-content-posts-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1.7vw;
+
+}
+
+.section-blogs-content-post img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* object-fit: cover;
+    object-position: center; */
+}
+
+.section-blogs-image-container {
+    width: 100%;
+    height: 22.4vw;
+    max-height: 430px;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.section-blogs-text-container {
+    margin-top: 24px;
+}
+
+.section-blogs-text-container-datatime-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-blogs-text-container p {
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: var(--other_white);
+}
+
+.section-blogs-text-container h4 {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-decoration-line: underline;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: var(--gold);
+    padding: 32px 0;
+}
+
+.section-blogs-text-container .content-text {
+    color: var(--grey);
+    padding-bottom: 32px;
+}
+
+.section-blogs-text-container a {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.section-blogs-text-container a:hover {
+    color: var(--white);
+}
+
+.section-blogs-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.section-blogs-button-container .gold-button {
+    font-family: var(--cormorant);
+    cursor: pointer;
+    border: none;
+    margin-top: 64px;
+    margin-bottom: 152px;
+}
+
+.blog-title-link h4 {
+    text-decoration: none;
+}
+
+.blog-title-link h4:hover {
+    text-decoration: underline;
+}
+
