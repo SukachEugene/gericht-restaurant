@@ -485,6 +485,67 @@ h6 {
     position: relative;
 }
 
+.section-blogs-text-container {
+    margin-top: 24px;
+}
+
+.section-blogs-text-container-datatime-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-blogs-text-container p {
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: var(--other_white);
+}
+
+.section-blogs-text-container h4 {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-decoration-line: underline;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: var(--gold);
+    padding: 32px 0;
+}
+
+.section-blogs-text-container .content-text {
+    color: var(--grey);
+    padding-bottom: 32px;
+}
+
+.section-blogs-text-container a {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.section-blogs-text-container a:hover {
+    color: var(--white);
+}
+
+.section-blogs-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.section-blogs-button-container .gold-button {
+    font-family: var(--cormorant);
+    cursor: pointer;
+    border: none;
+    margin-top: 64px;
+    margin-bottom: 152px;
+}
+
 
 
 

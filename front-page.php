@@ -363,11 +363,13 @@ $background = get_field('our_laurels_background_image');
                                 <div class="section-blogs-image-container">
                                     <?php echo $thumbnail ?>
                                 </div>
-                                <div>
-                                    <p><?php echo $date ?></p>
-                                    <p><?php echo $author ?></p>
-                                    <p><?php echo $title ?></p>
-                                    <p><?php echo $content ?></p>
+                                <div class="section-blogs-text-container">
+                                    <div class="section-blogs-text-container-datatime-row">
+                                        <p><?php echo $date ?></p>
+                                        <p><?php echo " - " . $author ?></p>
+                                    </div>
+                                    <h4><?php echo $title ?></h4>
+                                    <p class="content-text"><?php echo $content ?></p>
                                     <a href="<?php echo $link ?>">Read more</a>
                                 </div>
 
@@ -381,6 +383,9 @@ $background = get_field('our_laurels_background_image');
                 ?>
 
 
+            </div>
+            <div class="section-blogs-button-container">
+                <button class="gold-button">View More</button>
             </div>
         </div>
 
