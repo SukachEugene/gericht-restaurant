@@ -8,6 +8,7 @@ window.onload = function () {
 
 function addEventListeners() {
   document.getElementById('scroll-down').addEventListener('click', scrollDown, false);
+  document.getElementById('scroll-top').addEventListener('click', scrollTop, false);
   addEventLictenerToClass('click', 'menu-filter', menuFilter, false);
 
 }
@@ -15,6 +16,10 @@ function addEventListeners() {
 function scrollDown() {
   let headerHeight = document.getElementById('header').offsetHeight;
   window.scrollTo(0, window.innerHeight - headerHeight);
+}
+
+function scrollTop() {
+  window.scrollTo(0, 0);
 }
 
 function addEventLictenerToClass(listener, className, functionName, boolean) {
