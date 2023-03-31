@@ -2,7 +2,7 @@
 footer {
     overflow: hidden;
     background-size: cover;
-    margin-top: 113px;
+    /* margin-top: 113px; */
     
 }
 
@@ -19,6 +19,8 @@ footer {
 
     border: 1px solid rgba(220, 202, 135, 0.2);
     box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.7);
+
+    position: relative;
 }
 
 footer h6 {
@@ -128,7 +130,7 @@ footer p {
 .bottom-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 128px;
+    /* margin-top: 128px; */
 }
 
 .bottom-container-element {
@@ -228,3 +230,21 @@ footer h5 {
     left: 0;
     z-index: -1;
 }
+
+
+.footer-button-container {
+    position: relative;
+    height: 128px;
+    width: 93.75vw;
+    margin-left: -16vw;
+
+}
+
+#scroll-top {
+    position: absolute;
+    right: 0;
+    top: -30%;
+    z-index: 100;
+    min-width: 60px;
+}
+

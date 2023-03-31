@@ -2,16 +2,11 @@
 get_header()
 ?>
 
-
-
 <section class="section-head-posts">
 
     <div class="slider-one">
 
         <?php
-
-        // $title_words_count = get_field('header_slides_title_words_count');
-        // $content_words_count = get_field('header_slides_content_words_count');
         $title_characters_count = get_field('header_slides_title_characters_count');
         $content_characters_count = get_field('header_slides_content_characters_count');
 
@@ -131,10 +126,10 @@ get_header()
             </div>
 
             <?php if ($scroll) : ?>
-                <button class="scroll-button pointer" id="scroll-down" type="button">
+                <div class="scroll-button pointer" id="scroll-down">
                     <img src="<?php echo $scroll['url']; ?>" alt="<?php echo $scroll['alt']; ?>" title="<?php echo $scroll['title']; ?>">
                     <p>SCROLL</p>
-                </button>
+                </div>
             <?php endif ?>
 
         </div>
@@ -142,220 +137,234 @@ get_header()
 
 </section>
 
-<?php
-$background = get_field('about_company_background');
-$letter = get_field('letter_back', 'options');
-$logo = get_field('logo', 'options');
-?>
 
+<div class="global-lines">
+    <?php
+    $left_line = get_field('through_line_left', 'options');
+    $right_line = get_field('through_line_right', 'options');
+    ?>
 
-<section class="section-knife" style="background-image: url('<?php echo $background['url']; ?>')">
-
-    <?php if ($letter) : ?>
-        <img class="background-letter" src="<?php echo $letter['url']; ?>" alt="<?php echo $letter['alt']; ?>" title="<?php echo $letter['title']; ?>">
+    <?php if ($left_line) : ?>
+        <img class="through-line left" src="<?php echo $left_line['url']; ?>" alt="<?php echo $left_line['alt']; ?>" title="<?php echo $left_line['title']; ?>">
     <?php endif ?>
 
-    <div class="container">
-        <div class="section-knife-content">
-            <?php
-            $spoon = get_field('spoon', 'options');
-            $title_left = get_field('about_company_left_title');
-            $title_right = get_field('about_company_right_title');
-            $text_left = get_field('about_company_left_text');
-            $text_right = get_field('about_company_right_text');
-            $link_left = get_field('about_company_left_link');
-            $link_right = get_field('about_company_right_link');
-            $image = get_field('about_company_image');
-
-            ?>
-
-            <div class="section-knife-content-text-container left">
-                <?php if ($title_left) : ?>
-                    <h2><?php echo $title_left ?></h2>
-                <?php endif ?>
-                <?php if ($spoon) : ?>
-                    <img class="spoon upset" src="<?php echo $spoon['url']; ?>" alt="<?php echo $spoon['alt']; ?>" title="<?php echo $spoon['title']; ?>">
-                <?php endif ?>
-                <?php if ($text_left) : ?>
-                    <p><?php echo $text_left ?></p>
-                <?php endif ?>
-                <?php if ($link_left) : ?>
-                    <a class="gold-button" href="<?php echo esc_url($link_left['url']); ?>" target="<?php echo esc_attr($link_left['target']); ?>"> <?php echo  $link_left['title']; ?> </a>
-                <?php endif ?>
-            </div>
-
-            <?php if ($image) : ?>
-                <img class="section-knife-content-image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" title="<?php echo $image['title']; ?>">
-            <?php endif ?>
-
-            <div class="section-knife-content-text-container right">
-                <?php if ($title_right) : ?>
-                    <h2><?php echo $title_right ?></h2>
-                <?php endif ?>
-                <?php if ($spoon) : ?>
-                    <img class="spoon" src="<?php echo $spoon['url']; ?>" alt="<?php echo $spoon['alt']; ?>" title="<?php echo $spoon['title']; ?>">
-                <?php endif ?>
-                <?php if ($text_right) : ?>
-                    <p><?php echo $text_right ?></p>
-                <?php endif ?>
-                <?php if ($link_right) : ?>
-                    <a class="gold-button" href="<?php echo esc_url($link_right['url']); ?>" target="<?php echo esc_attr($link_right['target']); ?>"> <?php echo  $link_right['title']; ?> </a>
-                <?php endif ?>
-            </div>
-
-        </div>
-
-    </div>
-
-    <?php if ($logo) : ?>
-        <img class="logo" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" title="<?php echo $logo['title']; ?>">
+    <?php if ($right_line) : ?>
+        <img class="through-line right" src="<?php echo $right_line['url']; ?>" alt="<?php echo $right_line['alt']; ?>" title="<?php echo $right_line['title']; ?>">
     <?php endif ?>
 
-</section>
+    <?php
+    $background = get_field('about_company_background');
+    $letter = get_field('letter_back', 'options');
+    $logo = get_field('logo', 'options');
+    ?>
 
+    <section class="section-knife" style="background-image: url('<?php echo $background['url']; ?>')">
 
+        <?php if ($letter) : ?>
+            <img class="background-letter" src="<?php echo $letter['url']; ?>" alt="<?php echo $letter['alt']; ?>" title="<?php echo $letter['title']; ?>">
+        <?php endif ?>
 
-<?php get_template_part('templates/block', 'reservations'); ?>
-
-<?php get_template_part('templates/block', 'menu'); ?>
-
-<?php get_template_part('templates/block', 'chefs-word'); ?>
-
-<?php get_template_part('templates/block', 'customers'); ?>
-
-<?php get_template_part('templates/block', 'video-banner'); ?>
-
-
-
-<?php
-$background = get_field('our_laurels_background_image');
-?>
-<section class="section-laurels" style="background-image: url('<?php echo $background['url']; ?>')">
-
-    <div class="section-laurels-container">
-        <div class="section-laurels-content">
-
-            <div class="section-laurels-content-left-part">
-
+        <div class="container">
+            <div class="section-knife-content">
                 <?php
-                $header = get_field('our_laurels_header');
                 $spoon = get_field('spoon', 'options');
-                $title = get_field('our_laurels_title');
+                $title_left = get_field('about_company_left_title');
+                $title_right = get_field('about_company_right_title');
+                $text_left = get_field('about_company_left_text');
+                $text_right = get_field('about_company_right_text');
+                $link_left = get_field('about_company_left_link');
+                $link_right = get_field('about_company_right_link');
+                $image = get_field('about_company_image');
+
                 ?>
 
+                <div class="section-knife-content-text-container left">
+                    <?php if ($title_left) : ?>
+                        <h2><?php echo $title_left ?></h2>
+                    <?php endif ?>
+                    <?php if ($spoon) : ?>
+                        <img class="spoon upset" src="<?php echo $spoon['url']; ?>" alt="<?php echo $spoon['alt']; ?>" title="<?php echo $spoon['title']; ?>">
+                    <?php endif ?>
+                    <?php if ($text_left) : ?>
+                        <p><?php echo $text_left ?></p>
+                    <?php endif ?>
+                    <?php if ($link_left) : ?>
+                        <a class="gold-button" href="<?php echo esc_url($link_left['url']); ?>" target="<?php echo esc_attr($link_left['target']); ?>"> <?php echo  $link_left['title']; ?> </a>
+                    <?php endif ?>
+                </div>
 
-                <?php if ($header) : ?>
-                    <h6><?php echo $header ?></h6>
+                <?php if ($image) : ?>
+                    <img class="section-knife-content-image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" title="<?php echo $image['title']; ?>">
                 <?php endif ?>
 
-                <?php if ($spoon) : ?>
-                    <img class="spoon" src="<?php echo $spoon['url']; ?>" alt="<?php echo $spoon['alt']; ?>" title="<?php echo $spoon['title']; ?>">
-                <?php endif; ?>
+                <div class="section-knife-content-text-container right">
+                    <?php if ($title_right) : ?>
+                        <h2><?php echo $title_right ?></h2>
+                    <?php endif ?>
+                    <?php if ($spoon) : ?>
+                        <img class="spoon" src="<?php echo $spoon['url']; ?>" alt="<?php echo $spoon['alt']; ?>" title="<?php echo $spoon['title']; ?>">
+                    <?php endif ?>
+                    <?php if ($text_right) : ?>
+                        <p><?php echo $text_right ?></p>
+                    <?php endif ?>
+                    <?php if ($link_right) : ?>
+                        <a class="gold-button" href="<?php echo esc_url($link_right['url']); ?>" target="<?php echo esc_attr($link_right['target']); ?>"> <?php echo  $link_right['title']; ?> </a>
+                    <?php endif ?>
+                </div>
 
-                <?php if ($title) : ?>
-                    <h2><?php echo $title ?></h2>
-                <?php endif ?>
+            </div>
 
-                <div class="section-laurels-goals">
+        </div>
+
+        <?php if ($logo) : ?>
+            <img class="logo" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" title="<?php echo $logo['title']; ?>">
+        <?php endif ?>
+
+    </section>
+
+
+    <?php get_template_part('templates/block', 'reservations'); ?>
+
+    <?php get_template_part('templates/block', 'menu'); ?>
+
+    <?php get_template_part('templates/block', 'chefs-word'); ?>
+
+    <?php get_template_part('templates/block', 'customers'); ?>
+
+    <?php get_template_part('templates/block', 'video-banner'); ?>
+
+
+    <?php
+    $background = get_field('our_laurels_background_image');
+    ?>
+    <section class="section-laurels" style="background-image: url('<?php echo $background['url']; ?>')">
+
+        <div class="section-laurels-container">
+            <div class="section-laurels-content">
+
+                <div class="section-laurels-content-left-part">
+
                     <?php
-                    $goals = get_field('our_laurels_goals');
-
-                    if ($goals) :
-                        foreach ($goals as $goal) :
-
-                            $number = $goal['number'];
-                            $image = $goal['image'];
-                            $title = $goal['title'];
-                            $text = $goal['text'];
+                    $header = get_field('our_laurels_header');
+                    $spoon = get_field('spoon', 'options');
+                    $title = get_field('our_laurels_title');
                     ?>
 
-                            <div class="section-laurels-goals-element">
-                                <div class="section-laurels-goals-element-image-container">
-                                    <p class="laurel-number"><?php echo $number ?></p>
-                                    <img class="laurel-image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" title="<?php echo $image['title']; ?>">
+                    <?php if ($header) : ?>
+                        <h6><?php echo $header ?></h6>
+                    <?php endif ?>
+
+                    <?php if ($spoon) : ?>
+                        <img class="spoon" src="<?php echo $spoon['url']; ?>" alt="<?php echo $spoon['alt']; ?>" title="<?php echo $spoon['title']; ?>">
+                    <?php endif; ?>
+
+                    <?php if ($title) : ?>
+                        <h2><?php echo $title ?></h2>
+                    <?php endif ?>
+
+                    <div class="section-laurels-goals">
+                        <?php
+                        $goals = get_field('our_laurels_goals');
+
+                        if ($goals) :
+                            foreach ($goals as $goal) :
+
+                                $number = $goal['number'];
+                                $image = $goal['image'];
+                                $title = $goal['title'];
+                                $text = $goal['text'];
+                        ?>
+
+                                <div class="section-laurels-goals-element">
+                                    <div class="section-laurels-goals-element-image-container">
+                                        <p class="laurel-number"><?php echo $number ?></p>
+                                        <img class="laurel-image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" title="<?php echo $image['title']; ?>">
+                                    </div>
+
+                                    <div>
+                                        <h4><?php echo $title ?></h4>
+                                        <p><?php echo $text ?></p>
+                                    </div>
                                 </div>
 
-                                <div>
-                                    <h4><?php echo $title ?></h4>
-                                    <p><?php echo $text ?></p>
-                                </div>
-                            </div>
+                        <?php
+                            endforeach;
+                        endif;
+                        ?>
 
+                    </div>
+
+                </div>
+
+                <?php
+                $image = get_field('image_element', 'options');
+                $letter = get_field('letter_front', 'options');
+                ?>
+
+                <div class="section-laurels-content-right-part">
+                    <img class="image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" title="<?php echo $image['title']; ?>">
+                    <img class="letter" src="<?php echo $letter['url']; ?>" alt="<?php echo $letter['alt']; ?>" title="<?php echo $letter['title']; ?>">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section-blogs">
+
+        <div class="container">
+
+            <div class="section-blogs-content">
+
+                <div class="section-blogs-content-head">
 
                     <?php
-                        endforeach;
-                    endif;
+                    $header = get_field('blogs_header');
+                    $spoon = get_field('spoon', 'options');
+                    $title = get_field('blogs_title');
                     ?>
 
+                    <?php if ($header) : ?>
+                        <h6><?php echo $header ?></h6>
+                    <?php endif ?>
+
+                    <?php if ($spoon) : ?>
+                        <img class="spoon" src="<?php echo $spoon['url']; ?>" alt="<?php echo $spoon['alt']; ?>" title="<?php echo $spoon['title']; ?>">
+                    <?php endif; ?>
+
+                    <?php if ($title) : ?>
+                        <h2><?php echo $title ?></h2>
+                    <?php endif ?>
+                </div>
+
+                <div class="section-blogs-content-posts-container" id="posts-container">
+
+                    <?php get_template_part('templates/block', 'blog-posts'); ?>
+
+                </div>
+
+                <div class="section-blogs-button-container">
+                    <button class="gold-button" id="load-more-posts">View More</button>
                 </div>
 
             </div>
 
             <?php
-
-            $image = get_field('image_element', 'options');
-            $letter = get_field('letter_front', 'options');
-
-            ?>
-
-            <div class="section-laurels-content-right-part">
-                <img class="image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" title="<?php echo $image['title']; ?>">
-                <img class="letter" src="<?php echo $letter['url']; ?>" alt="<?php echo $letter['alt']; ?>" title="<?php echo $letter['title']; ?>">
-            </div>
-
-
-        </div>
-    </div>
-</section>
-
-<section class="section-blogs">
-
-    <div class="container">
-
-        <div class="section-blogs-content">
-
-            <div class="section-blogs-content-head">
-
-                <?php
-                $header = get_field('blogs_header');
-                $spoon = get_field('spoon', 'options');
-                $title = get_field('blogs_title');
-                ?>
-
-                <?php if ($header) : ?>
-                    <h6><?php echo $header ?></h6>
-                <?php endif ?>
-
-                <?php if ($spoon) : ?>
-                    <img class="spoon" src="<?php echo $spoon['url']; ?>" alt="<?php echo $spoon['alt']; ?>" title="<?php echo $spoon['title']; ?>">
-                <?php endif; ?>
-
-                <?php if ($title) : ?>
-                    <h2><?php echo $title ?></h2>
-                <?php endif ?>
-            </div>
-
-            <div class="section-blogs-content-posts-container" id="posts-container">
-
-            <?php get_template_part('templates/block', 'blog-posts'); ?>
-
-            </div>
-
-            <div class="section-blogs-button-container">
-                <button class="gold-button" id="load-more-posts">View More</button>
-            </div>
+            $logo = get_field('logo', 'options');
+            if ($logo) : ?>
+                <img class="logo" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" title="<?php echo $logo['title']; ?>">
+            <?php endif ?>
 
         </div>
 
+    </section>
+
+    <div class="front-page">
+        <?php get_template_part('templates/block', 'gallery'); ?>
     </div>
 
-</section>
+    <?php
+    get_footer();
+    ?>
 
-
-<?php get_template_part('templates/block', 'gallery'); ?>
-
-
-
-<?php
-get_footer();
-?>
+</div>

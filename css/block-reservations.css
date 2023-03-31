@@ -3,6 +3,7 @@
 .section-reservations {
     display: flex;
     justify-content: center; 
+    z-index: 2;
 }
 
 .section-reservations h6 {
@@ -21,15 +22,17 @@
     justify-content: center;
     text-align: center;
     margin: 152px 0;
+    
 }
 
 .template-reservation-content {
     width: 71vw;
     padding: 48px 1.67vw 23px 1.67vw;
-    background-color: var(--form-black);
+    background-color: var(--black);
 
     border: 1px solid rgba(220, 202, 135, 0.2);
     box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.7);
+
 }
 
 .template-reservation-content-form {

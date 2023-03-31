@@ -34,17 +34,20 @@
         </div>
 
         <div class="section-gallery-slider">
+
             <?php
             $code = get_field('gallery_code', 'options');
             echo do_shortcode($code);
             ?>
 
         </div>
+
+        <?php
+        $logo = get_field('logo', 'options');
+        if ($logo) : ?>
+            <img class="logo" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" title="<?php echo $logo['title']; ?>">
+        <?php endif ?>
+
     </div>
 
 </section>
-
-<?php
-// $link = '[insta-gallery id="2"]';
-// echo do_shortcode($link);
-?>

@@ -46,6 +46,10 @@ h6 {
     min-height: 100px;
 }
 
+.front-page .gallery-container {
+    margin-bottom: 113px;
+}
+
 
 
 
@@ -131,6 +135,7 @@ h6 {
     padding-left: 1.25vw;
     margin-bottom: 1.25vw;
     height: auto;
+    align-self: center;
 }
 
 .section-head-posts-content-frame {
@@ -154,7 +159,7 @@ h6 {
 .section-head-posts-content-image {
     position: relative;
     width: 32vw;
-    height: 100%;
+    /* height: 100%; */
     z-index: 2;
 }
 
@@ -213,11 +218,12 @@ h6 {
 
 .scroll-button {
     display: flex;
+    width: min-content;
     flex-direction: column;
     align-items: center;
     row-gap: 24px;
     border: none;
-    background-color: inherit;
+    /* background-color: none; */
     transition: 1s;
 }
 
@@ -303,6 +309,7 @@ h6 {
 
 .section-knife-content-image {
     width: 4.4vw;
+    min-width: fit-content;
     padding: 0 4.4vw;
 }
 
@@ -430,9 +437,34 @@ h6 {
 
 
 
+/* --------------- Section Blogs -------------- */
+
+.section-blogs {
+    position: relative;
+}
+
+.section-blogs .logo {
+    position: absolute;
+    bottom: 123px;
+    right: 4.8vw;
+}
 
 
 
+
+
+ /* --------------- Section Gallery -------------- */
+
+
+.front-page .gallery-container {
+    position: relative;
+}
+
+.front-page .gallery-container .logo {
+    position: absolute;
+    bottom: -87px;
+    left: 5.5vw;
+}
 
 
 
@@ -444,16 +476,27 @@ h6 {
     .section-head-posts-content-text-container h1 {
         font-size: 60px;
         line-height: 80px;
+    }
 
+    .section-head-posts-content-header {
+        font-size: 20px;
     }
 }
+
 
 
 @media screen and (max-width: 1300px) {
 
     .section-head-posts-content-text-container h1 {
-        font-size: 50px;
+        font-size: 52px;
         line-height: 60px;
+    }
 
+    .section-head-posts-content-header {
+        font-size: 18px;
+    }
+
+    .section-head-posts-content-text {
+        font-size: 12px;
     }
 }

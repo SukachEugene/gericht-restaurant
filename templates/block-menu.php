@@ -2,6 +2,12 @@
 
     <div class="container">
 
+        <?php
+        $logo = get_field('logo', 'options');
+        if ($logo) : ?>
+            <img class="logo" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" title="<?php echo $logo['title']; ?>">
+        <?php endif ?>
+
         <article class="menu-banner-container">
 
             <?php

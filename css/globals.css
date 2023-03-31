@@ -12,7 +12,6 @@ html {
 :root {
     --black:#0C0C0C;
     --other_black: #0C0B08;
-    --form_black: #0C0C0C;
     --white: #FFFFFF;
     --other_white: #FAFAFA;
     --gold: #DCCA87;
@@ -30,13 +29,10 @@ body {
     text-align: left;
     background-color: var(--black);
     color: var(--white);
-
-    width: 100%;
+    width: 100%; 
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-
-
 }
 
 .container {
@@ -59,3 +55,16 @@ body {
 .quotes {
     width: 47px;
 }
+
+.global-lines {
+position: relative;
+overflow: hidden;
+}
+
+.through-line {
+    position: absolute;
+    z-index: -9999;
+}
+
+
+
