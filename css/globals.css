@@ -66,5 +66,61 @@ overflow: hidden;
     z-index: -9999;
 }
 
+h2 {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 83px;
+    letter-spacing: 0.03em;
+    color: var(--gold);
+}
+
+h5 {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: var(--gold);
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: var(--white);
+}
+
+
+.gold-button {
+    display: inline-block;
+    padding: 8px 1.7vw;
+    background-color: var(--gold);
+    color: var(--other_black);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+
+.gold-button:hover {
+    background-color: var(--darkgold);
+    color: var(--white);
+}
+
+.logo {
+    width: 7.5vw;
+    height: 7.5vw;
+    min-width: 100px;
+    min-height: 100px;
+}
+
+
 
 

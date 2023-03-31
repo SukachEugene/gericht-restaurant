@@ -1,17 +1,10 @@
-
-
 .section-reservations {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     z-index: 2;
 }
 
-.section-reservations h6 {
-    font-size: 23px;
-    font-weight: 700;
-    line-height: 30px;
-    letter-spacing: 0.04em;
-}
+
 
 .section-reservations .spoon {
     padding: 8px 0;
@@ -22,7 +15,7 @@
     justify-content: center;
     text-align: center;
     margin: 152px 0;
-    
+
 }
 
 .template-reservation-content {
@@ -50,7 +43,7 @@
 .section-reservations .nf-field-element {
     width: 21.46vw !important;
     /* height: 32px; */
-    
+
 }
 
 .section-reservations .ninja-forms-field {
@@ -77,7 +70,7 @@
 
 .section-reservations .ninja-forms-field option {
     color: var(--white);
-    font-feature-settings: 'tnum' on, 'lnum' on !important; 
+    font-feature-settings: 'tnum' on, 'lnum' on !important;
     font-size: 18px;
     font-weight: 600;
     line-height: 28px;
@@ -89,7 +82,8 @@
     border: none !important;
 }
 
-.flatpickr-day.today.selected, .flatpickr-day.selected {
+.flatpickr-day.today.selected,
+.flatpickr-day.selected {
     background-color: black !important;
     border: 2px solid black !important;
 }
@@ -137,6 +131,26 @@
     transform: translateX(-50%);
 }
 
-.template-reservation-content-form {
+/* .template-reservation-content-form {
     margin-bottom: 30px;
+} */
+
+
+@media screen and (max-width: 1200px) {
+
+    #nf-field-8 {
+        padding: 8px 16px;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .section-reservations .nf-field-element {
+        width: 70vw !important;
+    }
+
+    .nf-response-msg p {
+        width: 65vw !important;
+    }
 }
