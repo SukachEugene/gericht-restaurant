@@ -1,7 +1,38 @@
 
 @media screen and (max-width: 1400px) {
-    
+
     h2 {
         font-size: 52px;
+    }
+
+    h5 {
+        font-size: 21px;
+    }
+
+    h6 {
+        font-size: 19px;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    
+    .gold-button {
+        padding: 8px 16px;
+    }
+}
+
+
+
+@media screen and (max-width: 400px) {
+    
+    h2 {
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    h6 {
+        font-size: 15px;
     }
 }
