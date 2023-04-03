@@ -281,7 +281,7 @@ get_header()
                                         <img class="laurel-image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" title="<?php echo $image['title']; ?>">
                                     </div>
 
-                                    <div>
+                                    <div class="section-laurels-goals-element-text-container">
                                         <h4><?php echo $title ?></h4>
                                         <p><?php echo $text ?></p>
                                     </div>
