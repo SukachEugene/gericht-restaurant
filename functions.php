@@ -22,6 +22,7 @@ function my_theme_enqueue_files()
   wp_enqueue_style('header', get_template_directory_uri() . '/css/header.css');
   wp_enqueue_style('footer', get_template_directory_uri() . '/css/footer.css');
   wp_enqueue_style('front-page', get_template_directory_uri() . '/css/front-page.css');
+  wp_enqueue_style('our-services', get_template_directory_uri() . '/css/our-services.css');
   wp_enqueue_style('block-reservations', get_template_directory_uri() . '/css/block-reservations.css');
   wp_enqueue_style('block-menu', get_template_directory_uri() . '/css/block-menu.css');
   wp_enqueue_style('block-chefs-word', get_template_directory_uri() . '/css/block-chefs-word.css');
@@ -29,6 +30,7 @@ function my_theme_enqueue_files()
   wp_enqueue_style('block-video-banner', get_template_directory_uri() . '/css/block-video-banner.css');
   wp_enqueue_style('block-blog-posts', get_template_directory_uri() . '/css/block-blog-posts.css');
   wp_enqueue_style('block-gallery', get_template_directory_uri() . '/css/block-gallery.css');
+  wp_enqueue_style('block-head-banner', get_template_directory_uri() . '/css/block-head-banner.css');
   wp_enqueue_style('global-responsive', get_template_directory_uri() . '/css/global-responsive.css');
 
   // main theme's style file

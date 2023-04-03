@@ -1,7 +1,4 @@
-.section-menu {
-    /* height: calc(200vh - 2*var(--header_height)); */
-    /* overflow: hidden; */
-}
+
 
 .section-menu .container {
     position: relative;
@@ -14,11 +11,6 @@
     justify-content: center;
     row-gap: 64px;
 }
-
-/* .menu-banner-content {
-
-
-} */
 
 .section-menu h3 {
     font-weight: 600;
@@ -44,7 +36,6 @@
     padding-bottom: 48px;
 }
 
-
 .section-menu h3:hover {
     text-decoration-line: underline;
 }
@@ -64,13 +55,9 @@
     display: none;
 }
 
-.hide {}
-
 .active {
     display: block;
 }
-
-
 
 .menu-details-container-positions.active {
     display: flex;
@@ -81,12 +68,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* height: calc(100vh - var(--header_height)); */
     height: fit-content;
     padding-top: 122px;
     padding-bottom: 182px;
 }
 
+.services-page .menu-details-container {
+    padding-bottom: 0;
+}
+
+.services-page .section-menu .logo {
+    display: none;
+}
 
 .menu-details-container-head {
     text-align: center;
@@ -101,15 +94,11 @@
     display: none;
     column-gap: 1.7vw;
     margin-bottom: 64px;
-    /* max-height: 75%; */
-
 }
 
 .menu-details-container-positions-element.image {
     width: 21.5vw;
     align-self: center;
-
-
 }
 
 .menu-image {
@@ -141,7 +130,6 @@
     color: var(--grey);
 }
 
-
 .divider-container {
     display: flex;
     align-items: center;
@@ -152,14 +140,9 @@
     width: 100%;
 }
 
-/* .divider {
-    vertical-align: baseline;
-} */
-
 .menu-details-container-positions-element.text {
     display: flex;
     flex-direction: column;
-    /* row-gap: 40px; */
 }
 
 .menu-details-container-positions-element-content {
@@ -176,6 +159,9 @@
     position: absolute;
     top: 15px;
 }
+
+
+
 
 
 
@@ -247,9 +233,6 @@
     .menu-details.price {
         text-align: right;
     }
-
-    
-
 }
 
 
@@ -275,7 +258,6 @@
 
 
 
-
 @media screen and (max-width: 600px) {
 
     .section-menu h3 {
@@ -286,9 +268,9 @@
     .menu-details-container-positions-element-content-first-row {
         grid-template-columns: 6fr 4fr 2fr
     }
-
-
 }
+
+
 
 @media screen and (max-width: 400px) {
 
@@ -300,5 +282,4 @@
     .menu-details-container-positions-element-content-first-row {
         grid-template-columns: 6fr 3fr 2fr
     }
-
 }

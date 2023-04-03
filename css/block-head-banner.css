@@ -1,0 +1,41 @@
+
+
+.section-head-banner {
+    height: calc(100vh - var(--header_height));
+    margin-top: var(--header_height);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-head-banner-content {
+    text-align: center;
+
+}
+
+.breadcrumb {
+    font-family: var(--cormorant);
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: var(--white);
+    margin-top: 24px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb img {
+    padding: 0 16px;
+}

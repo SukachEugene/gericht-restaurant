@@ -66,6 +66,17 @@ overflow: hidden;
     z-index: -9999;
 }
 
+h1 {
+    font-family: var(--cormorant);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: var(--gold);
+}
+
 h2 {
     font-size: 64px;
     font-weight: 600;
@@ -114,6 +125,19 @@ h6 {
     color: var(--white);
 }
 
+.gold-button.transparent {
+    background-color: rgba(255, 255, 255, 0);
+    color: var(--white);
+    border: 1px solid var(--gold);
+}
+
+.gold-button.transparent:hover {
+    background-color: var(--darkgold);
+    color: var(--other_black);
+    border: 1px solid var(--darkgold);
+
+}
+
 .logo {
     width: 7.5vw;
     height: 7.5vw;
@@ -121,6 +145,8 @@ h6 {
     min-height: 100px;
 }
 
-
-
+.wide-container {
+    padding: 0 20.7vw;
+    min-width: 58.6vw;
+}
 

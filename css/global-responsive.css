@@ -21,6 +21,11 @@
     .gold-button {
         padding: 8px 16px;
     }
+
+    .wide-container {
+        padding: 0 8vw;
+        min-width: 84vw;
+    }
 }
 
 

@@ -1,0 +1,137 @@
+/* ----------------- Section Serving Quality ----------------- */
+
+.section-serving-quality {
+    padding-top: 194px;
+    padding-bottom: 152px;
+    text-align: center;
+    position: relative;
+}
+
+.section-serving-quality .spoon {
+    padding: 8px 0;
+}
+
+.section-serving-quality-content p {
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: var(--grey);
+    padding: 40px 6.8vw;
+    position: relative;
+
+}
+
+.section-serving-quality-content a:nth-of-type(1) {
+    margin-right: 40px;
+}
+
+.section-serving-quality .logo {
+    position: absolute;
+    bottom: 19px;
+    right: 7.9vw;
+}
+
+
+
+
+
+/* ----------------- Section Happy Hours ----------------- */
+
+
+.section-happy-hours {
+    height: calc(100vh - var(--header_height));
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 152px;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    padding: 0 5%;
+}
+
+.section-happy-hours h2 {
+    font-weight: 600;
+    font-size: 128px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+}
+
+.section-happy-hours-text {
+    display: flex;
+    justify-content: center;
+}
+
+.section-happy-hours p {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    margin-top: 32px;
+}
+
+.section-happy-hours .logo.top {
+    position: absolute;
+    top: calc(-85px - 7.5vw);
+    left: 7.6vw;
+}
+
+.section-happy-hours .logo.bottom {
+    position: absolute;
+    bottom: calc(-170px - 7.5vw);
+    right: 7.6vw;
+    z-index: 10;
+}
+
+.global-lines.services-page .through-line.left {
+    margin-top: 399px;
+
+}
+
+.global-lines.services-page .through-line.right {
+    margin-top: 309px;
+
+}
+
+
+
+
+
+@media screen and (max-width: 700px) {
+
+    .section-happy-hours h2 {
+        font-size: 100px;
+    }
+
+    .section-happy-hours-text {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .section-serving-quality-content a:nth-of-type(1) {
+        margin-right: 5vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .section-happy-hours h2 {
+        font-size: 80px;
+    }
+
+    .section-happy-hours-text p {
+        font-size: 28px;
+    }
+}

@@ -7,7 +7,9 @@ window.onload = function () {
 }
 
 function addEventListeners() {
-  document.getElementById('scroll-down').addEventListener('click', scrollDown, false);
+  if (document.getElementById('scroll-down') != null) {
+    document.getElementById('scroll-down').addEventListener('click', scrollDown, false);
+  }
   document.getElementById('scroll-top').addEventListener('click', scrollTop, false);
   addEventLictenerToClass('click', 'menu-filter', menuFilter, false);
 
@@ -86,11 +88,15 @@ function makeVideoControlButton() {
   let playButton = document.getElementById("play-video-banner-button");
   let logo = document.getElementById("section-video-logo");
 
+  if (video == null) {
+    return;
+  }
+
   playButton.addEventListener("click", function () {
 
-    
+
     video.play();
-    
+
 
     playButton.style.opacity = "1";
     logo.style.opacity = "0";
@@ -107,15 +113,15 @@ function makeVideoControlButton() {
     playButton.style.zIndex = "2";
     video.style.cursor = "auto"
     logo.style.opacity = "1";
-    
-    logo.addEventListener('mouseover',function(){
+
+    logo.addEventListener('mouseover', function () {
       logo.style.opacity = "0";
     })
 
-    logo.addEventListener('mouseout',function(){
+    logo.addEventListener('mouseout', function () {
       logo.style.opacity = "1";
     })
-   
+
   });
 
   document.addEventListener("keydown", function (event) {
