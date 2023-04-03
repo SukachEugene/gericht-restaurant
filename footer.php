@@ -51,16 +51,16 @@
         </div>
 
         <div class="footer-button-container">
-                <?php
-                $scroll = get_field('scroll', 'options');
+            <?php
+            $scroll = get_field('scroll', 'options');
 
-                if ($scroll) : ?>
-                    <div class="scroll-button pointer" id="scroll-top">
-                        <img src="<?php echo $scroll['url']; ?>" alt="<?php echo $scroll['alt']; ?>" title="<?php echo $scroll['title']; ?>">
-                        <p>TOP</p>
-                    </div>
-                <?php endif ?>
-            </div>
+            if ($scroll) : ?>
+                <div class="scroll-button pointer" id="scroll-top">
+                    <img src="<?php echo $scroll['url']; ?>" alt="<?php echo $scroll['alt']; ?>" title="<?php echo $scroll['title']; ?>">
+                    <p>TOP</p>
+                </div>
+            <?php endif ?>
+        </div>
 
         <div class="bottom-container">
 

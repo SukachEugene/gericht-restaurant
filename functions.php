@@ -1,5 +1,7 @@
 <?php
 
+require_once( get_template_directory() . '/helper.php' );
+
 
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_files');
 
