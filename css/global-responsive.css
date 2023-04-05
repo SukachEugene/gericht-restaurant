@@ -26,6 +26,13 @@
         padding: 0 8vw;
         min-width: 84vw;
     }
+
+    .container2 {
+        padding-left: 10vw;
+        padding-right: 10vw;
+        min-width: 80vw;
+    }
+
 }
 
 

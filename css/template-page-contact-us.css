@@ -1,0 +1,50 @@
+
+
+/* ----------------- Section Map ----------------- */
+
+.map-container {
+   opacity: 0.7;
+   transition: 1s;
+   border: 2px solid var(--gold);
+}
+
+.map-container:hover {
+    opacity: 0.9;
+
+ }
+
+
+.leaflet-control-attribution.leaflet-control {
+    display: none;
+}
+
+.section-map {
+    position: relative;
+    margin-top: 139px;
+    padding-bottom: 165px;
+}
+
+.section-map .logo {
+    position: absolute;
+    bottom: 94px;
+    right: 5.3vw;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .section-map .logo {
+        bottom: 30px;
+    }
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+    .map-container {
+        opacity: 0.9;
+     }
+}
+
+
