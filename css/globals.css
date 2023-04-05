@@ -85,6 +85,7 @@ h2 {
     color: var(--gold);
 }
 
+
 h5 {
     font-weight: 700;
     font-size: 23px;
@@ -148,5 +149,10 @@ h6 {
 .wide-container {
     padding: 0 20.7vw;
     min-width: 58.6vw;
+}
+
+.container2 {
+    padding: 0 16.15vw;
+    min-width: 67.7vw;
 }
 

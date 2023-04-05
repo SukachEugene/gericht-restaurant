@@ -82,7 +82,7 @@ function fixDownloadOfSliderOne() {
 
 
 // // video banner mechanic
-function makeVideoControlButton() {
+function makeVideoBannerControlButton() {
 
   let video = document.getElementById("video-banner");
   let playButton = document.getElementById("play-video-banner-button");
@@ -121,6 +121,52 @@ function makeVideoControlButton() {
     logo.addEventListener('mouseout', function () {
       logo.style.opacity = "1";
     })
+
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      video.pause();
+    }
+  });
+
+  video.addEventListener("click", function () {
+    if (!video.paused) {
+      video.pause();
+    }
+  });
+
+}
+
+
+
+// // video mechanic
+function makeVideoControlButton() {
+
+  let video = document.getElementById("video");
+  let playButton = document.getElementById("play-video-button");
+
+  if (video == null) {
+    return;
+  }
+
+  playButton.addEventListener("click", function () {
+
+    video.play();
+    playButton.style.opacity = "1";
+
+  });
+
+  video.addEventListener("play", function () {
+    playButton.style.opacity = "0";
+    playButton.style.zIndex = "-1";
+    video.style.cursor = "pointer"
+  });
+
+  video.addEventListener("pause", function () {
+    playButton.style.opacity = "1";
+    playButton.style.zIndex = "2";
+    video.style.cursor = "auto"
 
   });
 
