@@ -50,6 +50,7 @@
     text-align: center;
     margin-bottom: 152px;
     background-attachment: fixed;
+    -webkit-background-attachment: fixed;
     background-size: cover;
     position: relative;
     padding: 0 5%;
@@ -104,6 +105,7 @@
 
 
 
+/* ----------------- Responsibility ----------------- */
 
 
 @media screen and (max-width: 700px) {

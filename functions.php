@@ -23,6 +23,7 @@ function my_theme_enqueue_files()
   wp_enqueue_style('footer', get_template_directory_uri() . '/css/footer.css');
   wp_enqueue_style('front-page', get_template_directory_uri() . '/css/front-page.css');
   wp_enqueue_style('our-services', get_template_directory_uri() . '/css/our-services.css');
+  wp_enqueue_style('about-us', get_template_directory_uri() . '/css/about-us.css');
   wp_enqueue_style('block-reservations', get_template_directory_uri() . '/css/block-reservations.css');
   wp_enqueue_style('block-menu', get_template_directory_uri() . '/css/block-menu.css');
   wp_enqueue_style('block-chefs-word', get_template_directory_uri() . '/css/block-chefs-word.css');
@@ -92,7 +93,7 @@ function disable_gutenberg_editor()
 /* Disable WordPress Admin Bar for all users */
 add_filter('show_admin_bar', '__return_false');
 
-// remove top mafgin by WP admin panel
+// remove top margin by WP admin panel
 add_action('get_header', 'remove_admin_login_header');
 
 function remove_admin_login_header()
