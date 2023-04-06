@@ -53,8 +53,9 @@ $background = get_field('404_background', 'options');
             <?php endif ?>
 
         </div>
+    </div>
 
-
+    <div class="page-404-copyright-container">
         <?php
         $copyright = get_field('footer_copyright', 'options');
         if ($copyright) : ?>

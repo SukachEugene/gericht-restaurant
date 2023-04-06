@@ -25,6 +25,7 @@ function my_theme_enqueue_files()
   wp_enqueue_style('our-services', get_template_directory_uri() . '/css/our-services.css');
   wp_enqueue_style('about-us', get_template_directory_uri() . '/css/about-us.css');
   wp_enqueue_style('404', get_template_directory_uri() . '/css/404.css');
+  wp_enqueue_style('coming-soon', get_template_directory_uri() . '/css/coming-soon.css');
 
   wp_enqueue_style('template-page-contact-us', get_template_directory_uri() . '/css/template-page-contact-us.css');
   wp_enqueue_style('template-page-team', get_template_directory_uri() . '/css/template-page-team.css');
