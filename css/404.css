@@ -1,0 +1,107 @@
+
+.page-404 .footer-container {
+    display: none;
+}
+
+.page-404 {
+    background-size: cover;
+}
+
+.page-404-container {
+    padding: 0 34vw;
+    min-width: 32vw;
+    display: flex;
+    /* position: relative; */
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - var(--header_height));
+    margin-top: var(--header_height);
+}
+
+.page-404-content {
+    text-align: center;  
+    /* width: 100%;
+    height: 100%; */
+}
+
+.page-404-text {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: var(--white);
+    padding: 32px 0;
+}
+
+.page-404-container .footer-text-style {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    width: 100vw;
+    text-align: center;
+}
+
+.page-404-container .divider {
+    width: 80px;
+    padding-top: 16px;
+}
+
+.page-404-container .logo {
+    position: absolute;
+}
+
+.page-404-container .logo.top {
+    right: 8.7vw;
+    top: calc(99px + var(--header_height));
+
+}
+
+.page-404-container .logo.bottom {
+    left: 11.7vw;
+    bottom: 181px;
+
+}
+
+
+.page-404 .through-line {
+    z-index: 1;
+}
+
+.page-404 .through-line.left {
+    top: -690px;
+    left: 56vw;
+}
+
+.page-404 .through-line.right {
+    top: -780px;
+    left: 56vw;
+}
+
+.page-404-image {
+    width: 428px;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .page-404-image {
+        width: 70vw;
+        min-width: 250px;
+    }
+
+    .page-404-container .logo.bottom {
+        bottom: 150px;
+    }
+
+}
+
