@@ -95,17 +95,18 @@ footer p {
     color: var(--white);
 }
 
-.wpcf7-response-output {
+.subscribe-form  .wpcf7-response-output {
     display: none;
 }
 
-.wpcf7-spinner {
+.subscribe-form  .wpcf7-spinner {
     position: absolute;
     margin-top: 8px;
 }
 
-.wpcf7-not-valid-tip {
+.subscribe-form  .wpcf7-not-valid-tip {
     position: absolute;
+    width: 100%;
     left:50%;
     margin-top: 10px;
     transform: translateX(-50%);
@@ -274,6 +275,12 @@ footer h5 {
 
     .bottom-container-element {
         width: 100%;
+    }
+
+    .subscribe-form  .wpcf7-not-valid-tip {
+
+        margin-top: 0px;
+        font-size: 16px;
     }
 
 
