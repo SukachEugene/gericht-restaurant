@@ -1,0 +1,237 @@
+
+.hide-logo #section-video-logo {
+   display: none;
+}
+
+.section-team {
+    position: relative;
+    padding: 152px 0;
+}
+
+.section-team .logo.top {
+    position: absolute;
+    right: 4.7vw;
+    top: 556px;
+}
+
+.section-team .logo.bottom {
+    position: absolute;
+    left: 5vw;
+    bottom: 6px;
+}
+
+.section-team-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1.7vw;
+    row-gap: 64px;
+}
+
+.section-team-content-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.section-team-content-image-container {
+    position: relative;
+    border: 1px solid var(--gold);
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.section-team-content-text-container {
+    height: 20%;
+}
+
+.section-team-content-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    z-index: 3;
+}
+
+.section-team-content-image-container img:hover {
+    z-index: 1;
+}
+
+.section-team-content-image-container-links {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(128, 128, 128, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 10%;
+}
+
+.section-team-content-image-container-links:hover {
+    z-index: 4;
+}
+
+.section-team-icons-container {
+    display: flex;
+    margin-bottom: 16px;
+    column-gap: 1.2vw;
+}
+
+.section-team-icon {
+    color: var(--white);
+    font-size: 20px;
+}
+
+.section-team-icon:hover {
+    color: var(--gold);
+}
+
+.section-team-read-more {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.section-team-read-more:hover {
+    text-decoration: underline;
+}
+
+.section-team-chef-name {
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.section-team h4 {
+    padding-top: 32px;
+    padding-bottom: 8px;
+}
+
+.section-team-chef-name:hover {
+    color: var(--gold);
+}
+
+.section-team h5 {
+    font-family: var(--sans);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: var(--white);
+}
+
+.team-page-laurels-container {
+    position: relative;
+}
+
+.team-page-laurels-container .section-laurels {
+    margin-bottom: 0;
+}
+
+.team-page-laurels-container .logo {
+    position: absolute;
+    bottom: -223px;
+    right: 10.3vw;
+    z-index: 10;
+}
+
+.global-lines.team-page .through-line.left {
+    margin-top: 401px;
+}
+
+.global-lines.team-page .through-line.right {
+    margin-top: 310px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1600px) {
+
+    .section-team-chef-name {
+        font-size: 35px;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .section-team-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .section-team-content-element {
+        width: auto;
+        height: auto;
+    }
+
+    .section-team-chef-name {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .section-team-chef-name {
+        font-size: 35px;
+    }
+
+    .section-team-icons-container {
+        column-gap: 15px;
+    }
+
+    .section-team .logo.top {
+        right: 4.7vw;
+        top: 20px;
+    }
+
+    .team-page-laurels-container .logo {
+        bottom: -20px;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .section-team-content {
+        grid-template-columns: 1fr;
+    }
+
+    .section-team-chef-name {
+        font-size: 45px;
+    }
+
+    .section-team-content-image-container {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .section-team-chef-name {
+        font-size: 35px;
+    }
+
+}
+
+
+
+
+

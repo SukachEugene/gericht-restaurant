@@ -3,6 +3,7 @@
 window.onload = function () {
   addEventListeners();
   fixDownloadOfSliderOne();
+  makeVideoBannerControlButton();
   makeVideoControlButton();
 }
 
@@ -83,6 +84,7 @@ function fixDownloadOfSliderOne() {
 
 // // video banner mechanic
 function makeVideoBannerControlButton() {
+  
 
   let video = document.getElementById("video-banner");
   let playButton = document.getElementById("play-video-banner-button");
