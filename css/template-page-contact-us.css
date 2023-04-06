@@ -1,0 +1,212 @@
+
+
+/* ----------------- Section Map ----------------- */
+
+.map-container {
+   opacity: 0.7;
+   transition: 1s;
+   border: 2px solid var(--gold);
+}
+
+.map-container:hover {
+    opacity: 0.9;
+
+ }
+
+
+.leaflet-control-attribution.leaflet-control {
+    display: none;
+}
+
+.section-map {
+    position: relative;
+    margin-top: 139px;
+    padding-bottom: 165px;
+}
+
+.section-map .logo {
+    position: absolute;
+    bottom: 94px;
+    right: 5.3vw;
+}
+
+
+
+
+
+/* ----------------- Section Form ----------------- */
+
+.section-contact-form {
+    padding: 128px 0;
+    margin-bottom: 152px;
+    background-size: cover;
+    position: relative;
+}
+
+.section-contact-form-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-form {
+    width: 33vw;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form-input {
+    width: 100%;
+
+    height: 60px;
+    padding: 16px 1vw;
+
+    font-family: var(--cormorant);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: var(--grey);
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid var(--lightgold);
+
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.contact-form-input.subscribe-form-email-textarea {
+    height: 140px;
+}
+
+.contact-form-submit {
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form-input:focus {
+    outline: 2px solid var(--gold);
+}
+
+
+
+.section-contact-form-content-image-container {
+    width: 29vw;
+    position: relative;
+}
+
+.section-contact-form-content-image-container .image {
+    max-width: 25vw;
+    margin-left: 4vw;
+    height: auto;
+    max-height: 70vh;
+}
+
+.section-contact-form-content-image-container .letter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 55%;
+} 
+
+
+.contact-form .wpcf7-form-control-wrap {
+    position: relative;
+}
+
+.contact-form .wpcf7-not-valid-tip {
+    position: absolute;
+    top: 0;
+}
+
+.contact-form .wpcf7-response-output {
+    display: none;
+}
+
+.contact-form .wpcf7-not-valid-tip {
+    position: absolute;
+    top: 45px
+}
+
+.contact-form .subscribe-form-email-textarea-container .wpcf7-not-valid-tip {
+    top: -12px;
+}
+
+.contact-form  .wpcf7-spinner {
+    position: absolute;
+    margin-top: 8px;
+}
+
+.section-contact-form .logo {
+    position: absolute;
+    bottom: calc(-27px - 7.5vw);
+    left: 13.9vw;
+    z-index: 10;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+
+    .section-map .logo {
+        bottom: 30px;
+    }
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+    .map-container {
+        opacity: 0.9;
+     }
+
+
+     .section-contact-form-content {
+        flex-direction: column-reverse;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .section-contact-form-content-image-container{
+        margin-bottom: 32px;
+    }
+
+    .section-contact-form-content-image-container {
+        width: 100%;
+    }
+
+    .section-contact-form-content-image-container .image {
+        width: 90%;
+        max-width: 90%;
+        margin-left: 10%;
+        height: auto;
+        max-height: none;
+
+    }
+
+    .contact-form-submit {
+        min-width: 110px;
+        text-align: center;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .contact-form-input {
+        padding-left: 10px;
+    }
+}
+
+
