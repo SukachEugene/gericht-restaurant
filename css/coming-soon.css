@@ -127,6 +127,16 @@
 }
 
 
+.coming-soon-time-element .number.active {
+    color: var(--gold);
+}
+
+
+
+
+
+
+
 @media screen and (max-width: 1600px) {
 
     .page-coming-soon-container {

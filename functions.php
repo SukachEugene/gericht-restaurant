@@ -55,7 +55,7 @@ function my_theme_enqueue_files()
 
   // custom scripts files
   wp_enqueue_script('jquery-scripts', get_template_directory_uri() . '/js/jquery-scripts.js');
-  wp_enqueue_script('timeWorker', get_template_directory_uri() . '/js/timeWorker.js');
+  wp_enqueue_script('timeWorker', get_template_directory_uri() . '/js/timeWorker.js', array(), '1.0', true);
   wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js');
 
   

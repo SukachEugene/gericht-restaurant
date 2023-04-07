@@ -56,6 +56,7 @@ $background = get_field('background', 'options');
             $end_date = DateTime::createFromFormat('d/m/Y h:i a', $point);
             $interval = $start_date->diff($end_date);
 
+            if ($start_date < $end_date) {
             $months = $interval->y * 12 + $interval->m;
             $days = $interval->d;
             $hours = $interval->h;
@@ -64,6 +65,13 @@ $background = get_field('background', 'options');
 
             $current_year = date('Y');
             $current_month = date('n');
+            } else {
+                $months = 0;
+                $days = 0;
+                $hours = 0;
+                $minutes = 0;
+                $seconds = 0;
+            }
 
 
 
