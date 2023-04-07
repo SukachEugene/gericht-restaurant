@@ -5,7 +5,10 @@ window.onload = function () {
   fixDownloadOfSliderOne();
   makeVideoBannerControlButton();
   makeVideoControlButton();
-  makeTimer();
+
+  if (document.querySelector('.page-coming-soon')) {
+    makeTimer();
+  }
 }
 
 function addEventListeners() {
@@ -196,83 +199,61 @@ let current_year
 
 function makeTimer() {
 
-  let days_element = document.getElementById('days');
-
-  current_month = days_element.dataset.month + 1;  // becouse ctart count is 0
-  current_year = days_element.dataset.year;
-
-  let timer = setInterval(function () {
-    checkTime(current_month, current_year);
-  }, 1000);
-
-}
-
-function checkTime(m, y) {
   let seconds_element = document.getElementById('seconds');
-  let seconds = seconds_element.innerHTML;
-
   let minutes_element = document.getElementById('minutes');
-  let minutes = minutes_element.innerHTML;
-
   let hours_element = document.getElementById('hours');
-  let hours = hours_element.innerHTML;
-
   let days_element = document.getElementById('days');
-  let days = days_element.innerHTML;
-
   let months_element = document.getElementById('months');
-  let months = months_element.innerHTML;
-  
 
-  // first check if point time has come
-  if (months == 0 && days == 0 && hours == 0 && minutes == 0 && seconds == 0) {
-    return;
+  if (days_element) {
+    current_month = days_element.dataset.month;
+    current_year = days_element.dataset.year;
   }
 
-  // change seconds
-  if (seconds != 0) {
-    seconds--;
+
+  let worker = new Worker('../wp-content/themes/Gericht/js/timeWorker.js');
+  worker.postMessage({
+    current_month: current_month,
+    current_year: current_year,
+    seconds: parseInt(seconds_element.textContent),
+    minutes: parseInt(minutes_element.textContent),
+    hours: parseInt(hours_element.textContent),
+    days: parseInt(days_element.textContent),
+    months: parseInt(months_element.textContent),
+  });
+
+  worker.onmessage = function (event) {
+    const { days, hours, minutes, seconds, months } = event.data;
     seconds_element.innerHTML = seconds;
-  } else {
-    seconds_element.innerHTML = 59;
-
-    minutes--;
     minutes_element.innerHTML = minutes;
-  }
-
-  // change minutes
-  if (minutes == 0) {
-    minutes_element.innerHTML = 59;
-
-    hours--;
     hours_element.innerHTML = hours;
-  }
-
-  // change hours
-  if (hours == 0) {
-    hours_element.innerHTML = 23;
-
-    days--;
     days_element.innerHTML = days;
-    
-  }
+    months_element.innerHTML = months;
 
-    // change days
-    if (days == 0) {
-
-      current_month++;
-
-      let daysInNextMonth = new Date(y, m, 0).getDate();
-      
-      console.log(daysInNextMonth)
-      
-      days_element.innerHTML = daysInNextMonth;
-  
-      months--;
-      months_element.innerHTML = months;
+    if (months == 0 && days == 0 && hours == 0 && minutes == 0 && seconds == 0) {
+      makeEndTimerAnimation();
     }
-  
+  };
 
 }
+
+function makeEndTimerAnimation() {
+
+  let array = Array.from(document.getElementsByClassName('number'));
+
+  array.forEach(element => {
+    if (element.classList.contains('active')) {
+      element.classList.remove('active')
+    } else {
+      element.classList.add('active');
+    }
+  });
+
+}
+
+
+
+
+
 
 
