@@ -34,21 +34,39 @@ $background = get_field('background', 'options');
             <?php
             $header = get_field('header');
             $spoon = get_field('spoon', 'options');
-            $text = get_field('text');
+            $text = get_the_content();
 
+
+            // $point = get_field('time_point');
+            // $date = DateTime::createFromFormat('d/m/Y h:i a', $point);
+
+            // $point_timestamp = $date->getTimestamp();
+            // $remaining_time = $point_timestamp - time();
+
+            // $days = floor($remaining_time / (60 * 60 * 24));
+            // $months = floor($days / 30);
+            // $hours = floor(($remaining_time / (60 * 60)) % 24);
+            // $minutes = floor(($remaining_time / 60) % 60);
+            // $seconds = $remaining_time % 60;
+
+
+
+            $start_date = new DateTime();
             $point = get_field('time_point');
-            $date = DateTime::createFromFormat('d/m/Y h:i a', $point);
+            $end_date = DateTime::createFromFormat('d/m/Y h:i a', $point);
+            $interval = $start_date->diff($end_date);
+
+            $months = $interval->y * 12 + $interval->m;
+            $days = $interval->d;
+            $hours = $interval->h;
+            $minutes = $interval->i;
+            $seconds = $interval->s;
+
+            $current_year = date('Y');
+            $current_month = date('n');
 
 
-            $point_timestamp = $date->getTimestamp();
-            $remaining_time = $point_timestamp - time();
 
-
-            $days = floor($remaining_time / (60 * 60 * 24));
-            $months = floor($days / 30);
-            $hours = floor(($remaining_time / (60 * 60)) % 24);
-            $minutes = floor(($remaining_time / 60) % 60);
-            $seconds = $remaining_time % 60;
             ?>
 
             <?php
@@ -67,27 +85,27 @@ $background = get_field('background', 'options');
             <div class="coming-soon-time-container">
 
                 <div class="coming-soon-time-element">
-                    <p class="number"><?php echo $months ?></p>
+                    <p class="number" id="months"><?php echo $months ?></p>
                     <p class="description">Months</p>
                 </div>
 
                 <div class="coming-soon-time-element">
-                    <p class="number"><?php echo $days ?></p>
+                    <p class="number" id="days" data-month="<?php echo $current_month ?>" data-year="<?php echo $current_year ?>"><?php echo $days ?></p>
                     <p class="description">Days</p>
                 </div>
 
                 <div class="coming-soon-time-element">
-                    <p class="number"><?php echo $hours ?></p>
+                    <p class="number" id="hours"><?php echo $hours ?></p>
                     <p class="description">Hours</p>
                 </div>
 
                 <div class="coming-soon-time-element">
-                    <p class="number"><?php echo $minutes ?></p>
+                    <p class="number" id="minutes"><?php echo $minutes ?></p>
                     <p class="description">Minutes</p>
                 </div>
 
                 <div class="coming-soon-time-element">
-                    <p class="number"><?php echo $seconds ?></p>
+                    <p class="number" id="seconds"><?php echo $seconds ?></p>
                     <p class="description">Seconds</p>
                 </div>
 
@@ -102,8 +120,6 @@ $background = get_field('background', 'options');
             <?php endif ?>
 
         </div>
-
-
 
     </div>
 
