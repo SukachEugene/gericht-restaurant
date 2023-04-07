@@ -1,0 +1,189 @@
+.page-coming-soon .footer-container {
+    display: none;
+}
+
+.page-soming-soon {
+    background-size: cover;
+}
+
+.page-coming-soon-container {
+    padding: 0 26vw;
+    min-width: 48vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - var(--header_height) - 80px);
+    margin-top: var(--header_height);
+}
+
+.page-coming-soon-content {
+    text-align: center;
+    padding: 32px 0;
+}
+
+
+.coming-soon-time-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.page-coming-soon-container .logo {
+    position: absolute;
+}
+
+.page-coming-soon-container .logo.top {
+    right: 10.8vw;
+    top: calc(119px + var(--header_height));
+}
+
+.page-coming-soon-container .logo.bottom {
+    left: 3.7vw;
+    bottom: 40px;
+
+}
+
+.coming-soon-copyright-container {
+    width: 100vw;
+    text-align: center;
+    padding: 32px 0;
+    height: 16px;
+}
+
+.page-coming-soon-container .footer-text-style {
+    /* position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%); */
+
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    width: 100vw;
+    text-align: center;
+}
+
+.page-coming-soon .through-line {
+    z-index: 1;
+}
+
+.page-coming-soon .through-line.left {
+    top: -690px;
+    left: 56vw;
+}
+
+.page-coming-soon .through-line.right {
+    top: -780px;
+    left: 56vw;
+}
+
+.page-coming-soon .spoon {
+    margin-top: 16px;
+    margin-bottom: 40px;
+    width: 60px;
+}
+
+.coming-soon-text {
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    padding: 0 4.9vw 40px 4.9vw;
+}
+
+.coming-soon-time-element {
+    width: 8vw;
+    min-width: 100px;
+}
+
+.coming-soon-time-element .number {
+    font-family: var(--cormorant);
+    color: var(--lightgold);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+}
+
+.coming-soon-time-element .description {
+    font-family: var(--cormorant);
+    color: var(--grey);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+}
+
+
+@media screen and (max-width: 1600px) {
+
+    .page-coming-soon-container {
+        padding: 0 20vw;
+        min-width: 60vw;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .page-coming-soon-container {
+        padding: 0 16vw;
+        min-width: 68vw;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .page-coming-soon-container .logo.top {
+        top: calc(30px + var(--header_height));
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .page-coming-soon-content h1 {
+        font-size: 60px;
+    }
+
+    .coming-soon-time-element .number {
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .coming-soon-time-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coming-soon-time-element .number {
+        font-size: 64px;
+    }
+
+    .page-coming-soon-container {
+        margin-top: calc(var(--header_height) + 120px);
+        padding: 0 6vw;
+        min-width: 88vw;
+    }
+
+    .page-coming-soon-content {
+        padding-bottom: 140px;
+    }
+
+    .page-coming-soon-container .logo.bottom {
+        bottom: 80px;
+    }
+}
