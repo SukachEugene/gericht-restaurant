@@ -31,6 +31,7 @@ function my_theme_enqueue_files()
 
   wp_enqueue_style('template-page-contact-us', get_template_directory_uri() . '/css/template-page-contact-us.css');
   wp_enqueue_style('template-page-team', get_template_directory_uri() . '/css/template-page-team.css');
+  wp_enqueue_style('template-page-faq', get_template_directory_uri() . '/css/template-page-faq.css');
 
   wp_enqueue_style('block-reservations', get_template_directory_uri() . '/css/block-reservations.css');
   wp_enqueue_style('block-menu', get_template_directory_uri() . '/css/block-menu.css');
