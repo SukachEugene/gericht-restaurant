@@ -9,6 +9,11 @@ window.onload = function () {
   if (document.querySelector('.page-coming-soon')) {
     makeTimer();
   }
+
+  if (document.querySelector('.section-faq')) {
+    makeFAQ();
+  }
+  
 }
 
 function addEventListeners() {
@@ -250,6 +255,32 @@ function makeEndTimerAnimation() {
   });
 
 }
+
+
+
+
+// FAQ mechanic
+function makeFAQ() {
+  addEventLictenerToClass("click", "faq-element", showFAQ, false)
+}
+
+function showFAQ(e) {
+  element = e.target;
+
+  // get all FAQ element
+  while (!element.classList.contains("faq-element")) {
+    element = element.parentNode;
+  }
+
+  if (element.classList.contains("active")) {
+    element.classList.remove("active"); 
+  } else {
+    removeClassByClassList("faq-element", "active")
+    element.classList.add('active'); 
+  }
+
+}
+
 
 
 

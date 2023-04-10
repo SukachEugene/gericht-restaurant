@@ -1,0 +1,130 @@
+.section-faq-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 152px 0;
+}
+
+.section-faq-image-container {
+    position: relative;
+    width: 33vw;
+    height: fit-content;
+}
+
+.section-faq.left-frame {
+    position: absolute;
+    bottom: 0;
+    max-width: 70%;
+}
+
+.section-faq.right-frame {
+    position: absolute;
+    right: 0;
+    max-width: 70%;
+}
+
+.section-faq-image {
+    position: relative;
+    padding: 1.25vw;
+    width: calc(100% - 1.25vw - 1.25vw);
+    height: auto;
+}
+
+.faq-elements-container {
+    width: 33vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.faq-element {
+    padding: 24px;
+    background-color: #242424;
+    border: 1px solid #242424;
+    cursor: pointer;
+}
+
+.faq-element h3 {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: var(--white);
+}
+
+.faq-element p {
+    font-family: var(--sans);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: var(--grey);
+    padding-top: 16px;
+    display: none;
+}
+
+.faq-element.active {
+    border: 1px solid var(--gold);
+    transition: all 0.3s ease-in-out;
+}
+
+.faq-element.active h3 {
+    color: var(--gold);
+}
+
+.faq-element.active p {
+    display: block;
+}
+
+.section-faq {
+    position: relative;
+}
+
+.section-faq .logo {
+    position: absolute;
+    right: 7.86vw;
+    bottom: -98px;
+    z-index: 3;
+}
+
+.global-lines.faq-page .through-line.left {
+    margin-top: 401px;
+}
+
+.global-lines.faq-page .through-line.right {
+    margin-top: 310px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+
+    .section-faq-content {
+        flex-direction: column;
+    }
+
+    .section-faq-image-container {
+        width: 100%;
+    }
+
+    .faq-elements-container {
+        width: 100%;
+        padding-top: 16px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .section-faq .logo {
+
+        bottom: -30px;
+
+    }
+}
