@@ -1,0 +1,277 @@
+
+
+/* ----------------- Section About Chef ----------------- */
+
+.single-shef-page .through-line.left {
+    margin-top: 401px;
+    margin-left: 150px;
+}
+
+.single-shef-page .through-line.right {
+    margin-top: 311px;
+    margin-left: 80px;
+}
+
+
+
+.section-single-chef-top-part-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 152px 0;
+}
+
+.section-single-chef-top-part-image-container,
+.section-single-chef-top-part-text-container {
+    width: 48.6%;
+}
+
+.section-single-chef-top-part-image-container {
+    max-height: 75vh;
+    min-height: 50vh;
+    overflow: hidden;
+    border: 1px solid var(--gold);
+    position: relative;
+}
+
+.section-single-chef-top-part-image-container img {
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section-single-chef-top-part-text-container .spoon {
+    padding: 8px 0;
+}
+
+.section-single-chef-top-part-text-content p {
+    font-family: var(--sans);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: var(--grey);
+    padding-top: 64px;
+}
+
+.section-single-chef-stages {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    padding: 48px 0;
+}
+
+.section-single-chef-one-stage {
+    display: flex;
+}
+
+.section-single-chef-stages-divider {
+    padding-right: 8px;
+    color: var(--gold);
+}
+
+.section-single-chef-stages p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: var(--lightgold);
+}
+
+.section-csingle-chef-caption {
+    width: 16.6vw;
+    min-width: 200px;
+}
+
+.section-single-chef-top-part {
+    position: relative;
+}
+
+.section-single-chef-top-part .logo {
+    position: absolute;
+    right: 13.6vw;
+    bottom: 74px;
+}
+
+
+
+
+
+
+/* ----------------- Section Personal Achievements ----------------- */
+
+.section-single-chef-achievements-part {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section-single-chef-achievements-part-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 128px 0;
+    margin-bottom: 152px;
+}
+
+.section-single-chef-achievements-part-text-container,
+.section-single-chef-achievements-part-image-container {
+    width: 48.6%;
+}
+
+.section-single-chef-achievements-part-image-container {
+    overflow: hidden;
+    border: 1px solid var(--gold);
+    position: relative;
+    min-height: 50vh;
+}
+
+.section-single-chef-achievements-part-image-container img {
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.personal-achievements {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 64px;
+    column-gap: 1.7vw;
+    padding-top: 64px;
+}
+
+.section-single-chef-goals-element-image-container {
+    width: 4.2vw;
+    padding-right: 2.2vw;
+}
+
+.section-single-chef-achievements-part {
+    position: relative;
+}
+
+.section-single-chef-achievements-part .logo {
+    position: absolute;
+    left: 8.125vw;
+    bottom: calc(-64px - 7.5vw);
+}
+
+
+
+
+
+
+/* ----------------- Responsibility ----------------- */
+
+@media screen and (max-width: 1800px) {
+    .personal-achievements {
+        grid-template-columns: 1fr;
+    }
+
+    .section-single-chef-achievements-part-content .laurel-image {
+        width: 5vw;
+        min-width: 80px;
+    }
+
+    .section-single-chef-achievements-part-content .personal-achievements .laurel-number {
+        width: 5vw;
+        min-width: 80px;
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+
+    .section-single-chef-top-part-content {
+        flex-wrap: wrap;
+        row-gap: 64px;
+    }
+
+    .section-single-chef-top-part-image-container,
+    .section-single-chef-top-part-text-container {
+        width: 100%;
+    }
+
+    .section-single-chef-achievements-part-content {
+        flex-wrap: wrap;
+        row-gap: 64px;
+    }
+
+    .section-single-chef-top-part-image-container {
+        max-height: none;
+        min-height: fit-content;
+        overflow: visible;
+        border: 1px solid var(--gold);
+        position: static;
+    }
+
+    .section-single-chef-top-part-image-container img {
+        width: 100%;
+        height: auto;
+        min-width: 100%;
+        min-height: fit-content;
+        position: static;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+    }
+
+    .section-single-chef-achievements-part-text-container,
+    .section-single-chef-achievements-part-image-container {
+        width: 100%;
+    }
+
+    .section-single-chef-achievements-part-image-container {
+        overflow: visible;
+        border: 1px solid var(--gold);
+        position: static;
+        min-height: fit-content;
+    }
+
+    .section-single-chef-achievements-part-image-container img {
+        width: 100%;
+        height: auto;
+        min-width: 100%;
+        min-height: min-content;
+        position: static;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+    }
+
+    .section-single-chef-achievements-part-content .laurel-image {
+        width: 6vw;
+        min-width: 80px;
+    }
+
+    .section-single-chef-achievements-part-content .personal-achievements .laurel-number {
+        width: 6vw;
+        min-width: 80px;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    .section-single-chef-achievements-part-content .section-laurels-goals-element-image-container {
+        padding-right: 50px;
+    }
+
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .section-single-chef-top-part .logo {
+        bottom: 20px;
+    }
+}
