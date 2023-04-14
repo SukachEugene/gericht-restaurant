@@ -20,9 +20,12 @@
 // });
 
 
+
+//Blog Posts Downloader
 jQuery(function ($) {
 
     let currentPage = 1;
+    let numberPerPage = $('#load-more-posts').data('number');
 
     $('body').on('click', '#load-more-posts', function () {
 
@@ -35,6 +38,7 @@ jQuery(function ($) {
             data: {
                 action: 'load_more_posts',
                 page: currentPage,
+                numberPerPage: numberPerPage
             },
             success: function (response) {
 
@@ -48,9 +52,6 @@ jQuery(function ($) {
             }
             }
         });
-
-
-
 
     });
 });

@@ -277,7 +277,7 @@ get_header()
                 </div>
 
                 <div class="section-blogs-button-container">
-                    <button class="gold-button" id="load-more-posts">View More</button>
+                    <button class="gold-button" id="load-more-posts" data-number="3">View More</button>
                 </div>
 
             </div>
