@@ -3,15 +3,14 @@
 /* ----------------- Section Map ----------------- */
 
 .map-container {
-   opacity: 0.7;
+   /* opacity: 0.7; */
    transition: 1s;
    border: 2px solid var(--gold);
 }
 
-.map-container:hover {
+/* .map-container:hover {
     opacity: 0.9;
-
- }
+ } */
 
 
 .leaflet-control-attribution.leaflet-control {
