@@ -302,6 +302,27 @@
     width: 33vw;
 }
 
+.single-blog-post-content-bottom-part {
+    position: relative;
+}
+
+.single-blog-post-content-bottom-part .logo {
+    position: absolute;
+    right: -12.2vw;
+    top: 50%;
+}
+
+.comments-section {
+    position: relative;
+}
+
+.comments-section .logo {
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+}
+
+
 
 
 
@@ -372,6 +393,12 @@
 
     #respond {
         width: 84vw;
+    }
+
+    .single-blog-post-content-bottom-part .logo {
+        top: auto;
+        bottom: -130px;
+        right: 0;
     }
 }
 

@@ -1,3 +1,5 @@
+<div id="book-table"></div>
+
 <section class="section-reservations">
     <div class="container">
 
@@ -35,4 +37,5 @@
             </div>
         </div>
     </div>
+
 </section>
