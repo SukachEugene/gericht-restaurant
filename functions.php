@@ -35,6 +35,8 @@ function my_theme_enqueue_files()
   wp_enqueue_style('single-our-team', get_template_directory_uri() . '/css/single-our-team.css');
   wp_enqueue_style('single-post', get_template_directory_uri() . '/css/single-post.css');
 
+  wp_enqueue_style('flexible-content-styles', get_template_directory_uri() . '/css/flexible-content-styles.css');
+
   wp_enqueue_style('template-page-contact-us', get_template_directory_uri() . '/css/template-page-contact-us.css');
   wp_enqueue_style('template-page-team', get_template_directory_uri() . '/css/template-page-team.css');
   wp_enqueue_style('template-page-blog', get_template_directory_uri() . '/css/template-page-blog.css');
@@ -371,18 +373,74 @@ function load_more_posts()
 
 
 // Add sidebar
-function gericht_widgets_init() {
-  register_sidebar( array(
-      'name'          => __( 'Sidebar', 'Gericht' ),
-      'id'            => 'sidebar',
-      'description'   => __( 'Add widgets here to appear in your sidebar.', 'Gericht' ),
-      'before_widget' => '<div id="%1$s" class="widget %2$s">',
-      'after_widget'  => '</div>',
-      'before_title'  => '<h2 class="widget-title">',
-      'after_title'   => '</h2>',
-  ) );
+function gericht_widgets_init()
+{
+  register_sidebar(array(
+    'name'          => __('Sidebar', 'Gericht'),
+    'id'            => 'sidebar',
+    'description'   => __('Add widgets here to appear in your sidebar.', 'Gericht'),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ));
 }
-add_action( 'widgets_init', 'gericht_widgets_init' );
+add_action('widgets_init', 'gericht_widgets_init');
 
 
 
+
+
+// Add custom styles to flexible content
+function wpb_mce_buttons_2($buttons)
+{
+  array_unshift($buttons, 'styleselect');
+  return $buttons;
+}
+add_filter('mce_buttons_2', 'wpb_mce_buttons_2');
+
+//Decision from: https://www.wpbeginner.com/wp-tutorials/how-to-add-custom-styles-to-wordpress-visual-editor/
+function my_mce_before_init_insert_formats($init_array)
+{
+
+  $style_formats = array(
+
+    array(
+      'title' => 'Post Content Header',
+      'block' => 'span',
+      'classes' => 'post-content-header',
+      'wrapper' => true,
+    ),
+
+    array(
+      'title' => 'Post Content Image | Left Position',
+      'block' => 'div',
+      'classes' => 'post-content-image-left',
+      'wrapper' => true,
+    ),
+
+    array(
+      'title' => 'Post Content Image | Right Position',
+      'block' => 'div',
+      'classes' => 'post-content-image-right',
+      'wrapper' => true,
+    ),
+  );
+
+  $init_array['style_formats'] = json_encode($style_formats);
+  return $init_array;
+}
+// Attach callback to 'tiny_mce_before_init' 
+add_filter('tiny_mce_before_init', 'my_mce_before_init_insert_formats');
+
+
+
+
+
+
+
+// function ip_get_like_count($type = 'likes') {
+// 	$current_count = get_post_meta(get_the_id(), $type, true);
+
+// 	return ($current_count ? $current_count : 0);
+// }

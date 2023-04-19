@@ -13,7 +13,12 @@ window.onload = function () {
   if (document.querySelector('.section-faq')) {
     makeFAQ();
   }
-  
+
+  if (document.querySelector('.section-single-blog-post')) {
+    teleportLikesButton();
+    makeCorrectWithForHeading();
+  }
+
 }
 
 function addEventListeners() {
@@ -273,13 +278,41 @@ function showFAQ(e) {
   }
 
   if (element.classList.contains("active")) {
-    element.classList.remove("active"); 
+    element.classList.remove("active");
   } else {
     removeClassByClassList("faq-element", "active")
-    element.classList.add('active'); 
+    element.classList.add('active');
   }
 
 }
+
+
+
+// Likes element transform position
+function teleportLikesButton() {
+  let element = document.getElementsByClassName('pld-like-dislike-wrap')[0];
+  let container = document.getElementById('likes-container');
+  container.appendChild(element);
+}
+
+
+
+// make correct width for heading in post's block without picture
+function makeCorrectWithForHeading() {
+  let blocks = document.getElementsByClassName('text-content-element-in-post');
+
+  for (i = 0; i < blocks.length; i++) {
+
+    if (!blocks[i].querySelector('.post-content-image-right') && !blocks[i].querySelector('.post-content-image-left')) {
+      let header = blocks[i].querySelector("h3");
+      if (header) {
+        header.style.width = '100%';
+      }
+    }
+
+  }
+}
+
 
 
 
