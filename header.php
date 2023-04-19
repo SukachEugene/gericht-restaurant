@@ -25,7 +25,7 @@
                 $link = get_field('header_link', 'options');
                 ?>
 
-                <h4><?php echo $name ?></h4>
+                <h4 id="header-title"><?php echo $name ?></h4>
 
                 <?php
                 wp_nav_menu(array('theme_location' => 'header-menu'));
@@ -34,6 +34,15 @@
                 <div class="header-elements-right-part">
                     <button class="pointer" type="button"><?php echo $button_text ?></button>
                     <a href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>"> <?php echo  $link['title']; ?> </a>
+                </div>
+
+                <div class="burger-menu">
+                    <button id="open-main-nav" class="show">
+                        <i class="fa-sharp fa-solid fa-bars pointer"></i>
+                    </button>
+                    <button id="close-main-nav" class="hide">
+                        <i class="fa-solid fa-xmark pointer"></i>
+                    </button>
                 </div>
 
             </div>

@@ -29,6 +29,15 @@ function addEventListeners() {
   document.getElementById('scroll-top').addEventListener('click', scrollTop, false);
   addEventLictenerToClass('click', 'menu-filter', menuFilter, false);
 
+  document.getElementById('open-main-nav').addEventListener('click', menuSwitch, false);
+  document.getElementById('close-main-nav').addEventListener('click', menuSwitch, false);
+
+
+  // Variable for controlling correct change of nav menu size and appearance
+  let query = window.matchMedia("(max-width: 800px)");
+  // Event listener for closeMenu function
+  query.addEventListener('change', closeMenu);
+
 }
 
 function scrollDown() {
@@ -347,6 +356,80 @@ function makeCorrectReplyScroll() {
     console.log(offsetPosition)
 
   });
+}
+
+
+
+
+
+// mobile menu
+function menuSwitch() {
+
+  let openButton = document.getElementById('open-main-nav');
+  let closeButton = document.getElementById('close-main-nav');
+
+  let element1 = document.getElementsByClassName('menu-header-menu-container')[0];
+  let element2 = document.getElementsByClassName('header-elements-right-part')[0];
+
+
+  if (openButton.className == 'show') {
+
+    openButton.className = 'hide'
+    closeButton.className = 'show';
+
+    element1.style.display = 'flex'
+    element2.style.display = 'flex'
+
+  } else {
+
+    openButton.className = 'show'
+    closeButton.className = 'hide';
+
+    element1.style.display = 'none'
+    element2.style.display = 'none'
+  }
+
+}
+
+
+// For correct appearance of nav menu with different width of view vindow
+function closeMenu(inputQuery) {
+
+  console.log("++")
+
+  let openButton = document.getElementById('open-main-nav');
+  let closeButton = document.getElementById('close-main-nav');
+
+  let element1 = document.getElementsByClassName('menu-header-menu-container')[0];
+  let element2 = document.getElementsByClassName('header-elements-right-part')[0];
+
+
+  if (openButton.className == 'hide') {
+    openButton.className = 'show'
+  } 
+
+  if (closeButton.className == 'show') {
+    closeButton.className = 'hide';
+  }
+
+  element1.style.display = 'flex';
+  element2.style.display = 'flex';
+
+
+
+
+  if (inputQuery.currentTarget.matches) {
+
+    if (element1.style.display == 'flex') {
+      element1.style.display = 'none'
+    }
+
+    if (element2.style.display == 'flex') {
+      element2.style.display = 'none'
+    }
+
+
+  }
 }
 
 
