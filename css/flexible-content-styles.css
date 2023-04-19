@@ -1,0 +1,106 @@
+.post-content-header {
+    color: var(--gold);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    display: inline-block;
+    margin-top: 40px;
+    margin-bottom: 32px;
+}
+
+
+.single-blog-post-content-body p, .single-blog-post-content-body li  {
+    font-family: var(--sans);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: grey;
+}
+
+
+.single-blog-post-content-body ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    margin-top: 32px;
+    margin-bottom: 40px;
+    list-style-position: inside;
+}
+
+.single-blog-post-content-body ul li::marker {
+    content: '\2014\00a0\00a0';
+    color: var(--gold);   
+}
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #545454;
+    border: 1px solid var(--gold);
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.quote-container img {
+    width: 53px;
+}
+
+.quote-top {
+    margin-left: 16px;
+    margin-top: -4px;
+}
+
+.quote-bottom {
+    margin-right: 16px;
+    margin-bottom: -4px;
+    align-self: flex-end;
+}
+
+.quote-text {
+    text-align: center;
+    padding: 32px 3vw;
+    font-family: var(--cormorant);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+}
+
+.post-content-image-right {
+    margin-top: 40px;
+    float: right;
+    width: 40%;
+    height: auto;
+    padding-left: 5%;
+}
+
+.post-content-image-left {
+    margin-top: 40px;
+    float: left;
+    width: 40%;
+    height: auto;
+    padding-right: 5%;
+}
+
+.post-content-image-left img, .post-content-image-right img {
+    width: 100%;
+}
+
+.video-container.single-post {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.single-blog-post-content-body iframe {
+    width: 100%;
+}
+

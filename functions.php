@@ -35,6 +35,8 @@ function my_theme_enqueue_files()
   wp_enqueue_style('single-our-team', get_template_directory_uri() . '/css/single-our-team.css');
   wp_enqueue_style('single-post', get_template_directory_uri() . '/css/single-post.css');
 
+  wp_enqueue_style('flexible-content-styles', get_template_directory_uri() . '/css/flexible-content-styles.css');
+
   wp_enqueue_style('template-page-contact-us', get_template_directory_uri() . '/css/template-page-contact-us.css');
   wp_enqueue_style('template-page-team', get_template_directory_uri() . '/css/template-page-team.css');
   wp_enqueue_style('template-page-blog', get_template_directory_uri() . '/css/template-page-blog.css');
@@ -371,18 +373,94 @@ function load_more_posts()
 
 
 // Add sidebar
-function gericht_widgets_init() {
-  register_sidebar( array(
-      'name'          => __( 'Sidebar', 'Gericht' ),
-      'id'            => 'sidebar',
-      'description'   => __( 'Add widgets here to appear in your sidebar.', 'Gericht' ),
-      'before_widget' => '<div id="%1$s" class="widget %2$s">',
-      'after_widget'  => '</div>',
-      'before_title'  => '<h2 class="widget-title">',
-      'after_title'   => '</h2>',
-  ) );
+function gericht_widgets_init()
+{
+  register_sidebar(array(
+    'name'          => __('Sidebar', 'Gericht'),
+    'id'            => 'sidebar',
+    'description'   => __('Add widgets here to appear in your sidebar.', 'Gericht'),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ));
 }
-add_action( 'widgets_init', 'gericht_widgets_init' );
+add_action('widgets_init', 'gericht_widgets_init');
 
 
 
+
+
+// Add custom styles to flexible content
+function wpb_mce_buttons_2($buttons)
+{
+  array_unshift($buttons, 'styleselect');
+  return $buttons;
+}
+add_filter('mce_buttons_2', 'wpb_mce_buttons_2');
+
+//Decision from: https://www.wpbeginner.com/wp-tutorials/how-to-add-custom-styles-to-wordpress-visual-editor/
+function my_mce_before_init_insert_formats($init_array)
+{
+
+  $style_formats = array(
+
+    array(
+      'title' => 'Post Content Header',
+      'block' => 'span',
+      'classes' => 'post-content-header',
+      'wrapper' => true,
+    ),
+
+    array(
+      'title' => 'Post Content Image | Left Position',
+      'block' => 'div',
+      'classes' => 'post-content-image-left',
+      'wrapper' => true,
+    ),
+
+    array(
+      'title' => 'Post Content Image | Right Position',
+      'block' => 'div',
+      'classes' => 'post-content-image-right',
+      'wrapper' => true,
+    ),
+  );
+
+  $init_array['style_formats'] = json_encode($style_formats);
+  return $init_array;
+}
+// Attach callback to 'tiny_mce_before_init' 
+add_filter('tiny_mce_before_init', 'my_mce_before_init_insert_formats');
+
+
+
+
+// Custom conmments structure
+if (!function_exists('better_comments')) :
+  function better_comments($comment, $args, $depth)
+  {
+?>
+      <li <?php comment_class(); ?> id="comment-<?php comment_ID() ?>">
+          <div class="comment-flex">
+
+              <div class="img-thumbnail d-none d-sm-block">
+                  <?php echo get_avatar($comment, $size = '80', $default = 'http://0.gravatar.com/avatar/36c2a25e62935705c5565ec465c59a70?s=32&d=mm&r=g'); ?>
+              </div>
+
+              <div class="comment-content">
+                  <div class="comment-first-row">
+                      <h5><?php echo get_comment_author() ?></h5>
+                      <a href="#"><?php comment_reply_link(array_merge($args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?></a>
+                  </div>
+                  <p><?php echo get_comment_date('j M Y') ?></p>
+                  <div class="comment-content-text"> <?php comment_text() ?></div>
+              </div>
+
+          </div>
+
+  <?php
+  }
+endif;
+
+?>

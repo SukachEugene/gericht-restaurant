@@ -13,7 +13,13 @@ window.onload = function () {
   if (document.querySelector('.section-faq')) {
     makeFAQ();
   }
-  
+
+  if (document.querySelector('.section-single-blog-post')) {
+    teleportLikesButton();
+    makeCorrectWithForHeading();
+    makeCorrectReplyScroll();
+  }
+
 }
 
 function addEventListeners() {
@@ -27,11 +33,17 @@ function addEventListeners() {
 
 function scrollDown() {
   let headerHeight = document.getElementById('header').offsetHeight;
-  window.scrollTo(0, window.innerHeight - headerHeight);
+  window.scrollTo({
+    top: window.innerHeight - headerHeight,
+    behavior: 'smooth'
+  });
 }
 
 function scrollTop() {
-  window.scrollTo(0, 0);
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 }
 
 function addEventLictenerToClass(listener, className, functionName, boolean) {
@@ -273,13 +285,71 @@ function showFAQ(e) {
   }
 
   if (element.classList.contains("active")) {
-    element.classList.remove("active"); 
+    element.classList.remove("active");
   } else {
     removeClassByClassList("faq-element", "active")
-    element.classList.add('active'); 
+    element.classList.add('active');
   }
 
 }
+
+
+
+// Likes element transform position
+function teleportLikesButton() {
+  let element = document.getElementsByClassName('pld-like-dislike-wrap')[0];
+  let container = document.getElementById('likes-container');
+  container.appendChild(element);
+}
+
+
+
+// make correct width for heading in post's block without picture
+function makeCorrectWithForHeading() {
+  let blocks = document.getElementsByClassName('text-content-element-in-post');
+
+  for (i = 0; i < blocks.length; i++) {
+
+    if (!blocks[i].querySelector('.post-content-image-right') && !blocks[i].querySelector('.post-content-image-left')) {
+      let header = blocks[i].querySelector("h3");
+      if (header) {
+        header.style.width = '100%';
+      }
+    }
+
+  }
+}
+
+
+
+function makeCorrectReplyScroll() {
+  let element = document.getElementById('reply-title');
+  let link = element.querySelector('a');
+
+  link.addEventListener('click', function (event) {
+
+    event.preventDefault();
+
+    let id = link.href.split('#')[1];
+    let comment = document.getElementById(id);
+
+    const offset = -150; //height of header
+    const bodyRect = document.body.getBoundingClientRect().top;
+    const elementRect = comment.getBoundingClientRect().top;
+    const elementPosition = elementRect - bodyRect;
+    const offsetPosition = elementPosition + offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
+
+    console.log(offsetPosition)
+
+  });
+}
+
+
 
 
 

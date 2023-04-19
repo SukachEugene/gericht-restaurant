@@ -3,6 +3,7 @@ header {
     /* top: 0; */
     z-index: 1000;
     background-color: var(--black);
+    background-color: green;
     height: var(--header_height);
     max-height: var(--header_height);
     overflow: hidden;
@@ -115,6 +116,6 @@ header button:hover {
 
 @media screen and (max-width: 800px) {
 
-/* Need Burger menu */
+
 
 }
