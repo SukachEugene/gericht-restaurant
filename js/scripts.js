@@ -17,6 +17,7 @@ window.onload = function () {
   if (document.querySelector('.section-single-blog-post')) {
     teleportLikesButton();
     makeCorrectWithForHeading();
+    makeCorrectReplyScroll();
   }
 
 }
@@ -32,11 +33,17 @@ function addEventListeners() {
 
 function scrollDown() {
   let headerHeight = document.getElementById('header').offsetHeight;
-  window.scrollTo(0, window.innerHeight - headerHeight);
+  window.scrollTo({
+    top: window.innerHeight - headerHeight,
+    behavior: 'smooth'
+  });
 }
 
 function scrollTop() {
-  window.scrollTo(0, 0);
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 }
 
 function addEventLictenerToClass(listener, className, functionName, boolean) {
@@ -312,6 +319,36 @@ function makeCorrectWithForHeading() {
 
   }
 }
+
+
+
+function makeCorrectReplyScroll() {
+  let element = document.getElementById('reply-title');
+  let link = element.querySelector('a');
+
+  link.addEventListener('click', function (event) {
+
+    event.preventDefault();
+
+    let id = link.href.split('#')[1];
+    let comment = document.getElementById(id);
+
+    const offset = -150; //height of header
+    const bodyRect = document.body.getBoundingClientRect().top;
+    const elementRect = comment.getBoundingClientRect().top;
+    const elementPosition = elementRect - bodyRect;
+    const offsetPosition = elementPosition + offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
+
+    console.log(offsetPosition)
+
+  });
+}
+
 
 
 

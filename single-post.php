@@ -103,7 +103,22 @@ $tags = get_the_tags();
 
             </div>
 
-            <?php comments_template(); ?>
+            <div class="comments-section">
+
+                <?php
+                $comments_count = get_comments_number();
+                ?>
+
+                <h4>Comment(<?php echo $comments_count; ?>)</h4>
+
+
+                <div class="comments-container">
+
+                    <?php comments_template(); ?>
+                    
+                </div>
+
+            </div>
 
         </div>
 

@@ -436,11 +436,31 @@ add_filter('tiny_mce_before_init', 'my_mce_before_init_insert_formats');
 
 
 
+// Custom conmments structure
+if (!function_exists('better_comments')) :
+  function better_comments($comment, $args, $depth)
+  {
+?>
+      <li <?php comment_class(); ?> id="comment-<?php comment_ID() ?>">
+          <div class="comment-flex">
 
+              <div class="img-thumbnail d-none d-sm-block">
+                  <?php echo get_avatar($comment, $size = '80', $default = 'http://0.gravatar.com/avatar/36c2a25e62935705c5565ec465c59a70?s=32&d=mm&r=g'); ?>
+              </div>
 
+              <div class="comment-content">
+                  <div class="comment-first-row">
+                      <h5><?php echo get_comment_author() ?></h5>
+                      <a href="#"><?php comment_reply_link(array_merge($args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?></a>
+                  </div>
+                  <p><?php echo get_comment_date('j M Y') ?></p>
+                  <div class="comment-content-text"> <?php comment_text() ?></div>
+              </div>
 
-// function ip_get_like_count($type = 'likes') {
-// 	$current_count = get_post_meta(get_the_id(), $type, true);
+          </div>
 
-// 	return ($current_count ? $current_count : 0);
-// }
+  <?php
+  }
+endif;
+
+?>
