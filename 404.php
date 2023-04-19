@@ -63,10 +63,8 @@ $background = get_field('404_background', 'options');
         <?php endif ?>
     </div>
 
-
     <?php
     get_footer();
     ?>
-
 
 </div>

@@ -10,7 +10,7 @@ $posts = new WP_Query($args);
 if ($posts->have_posts()) {
     while ($posts->have_posts()) {
         $posts->the_post();
-        ?>
+?>
 
         <h2><?php the_title() ?></h2>
         <p><?php the_content() ?></p>

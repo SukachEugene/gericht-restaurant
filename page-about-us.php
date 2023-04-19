@@ -2,9 +2,7 @@
 get_header()
 ?>
 
-
 <?php get_template_part('templates/block', 'head-banner'); ?>
-
 
 <div class="global-lines about-us-page">
 
@@ -135,7 +133,6 @@ get_header()
         </div>
 
     </section>
-
 
     <section class="section-about-us">
         <?php

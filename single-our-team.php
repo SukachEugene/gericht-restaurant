@@ -4,7 +4,6 @@ get_header()
 
 <?php get_template_part('templates/block', 'head-banner'); ?>
 
-
 <div class="global-lines single-shef-page">
     <?php
     $left_line = get_field('through_line_left', 'options');
@@ -76,8 +75,6 @@ get_header()
             </div>
         </div>
 
-
-
         <?php
         $logo = get_field('logo', 'options');
         if ($logo) : ?>
@@ -114,7 +111,6 @@ get_header()
                         <?php
                         $achievements = get_field('achievements');
                         $picture = get_field('achievements_image');
-
 
                         if ($achievements) :
                             foreach ($achievements as $achievement) :

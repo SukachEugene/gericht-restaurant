@@ -1,8 +1,6 @@
 <?php
 
 
-
-
 function show_last_post_widget()
 {
 
@@ -20,7 +18,6 @@ function show_last_post_widget()
 
         public function widget($args, $instance)
         {
-
 
             $post = get_posts(array(
                 'post_type' => 'post',
@@ -83,12 +80,6 @@ add_action('widgets_init', 'show_last_post_widget');
 
 
 
-
-
-
-
-
-
 function show_all_posts_categories_widget()
 {
 
@@ -116,6 +107,7 @@ function show_all_posts_categories_widget()
             ));
 
             ?>
+
             <div class="sidebar-widget-container">
                 <h4>All Categories</h4>
                 <div class="sidebar-widget-categories-container">
@@ -161,11 +153,8 @@ add_action('widgets_init', 'show_all_posts_categories_widget');
 
 
 
-
-
 function show_all_posts_tags_widget()
 {
-
 
     class wpb_widget2 extends WP_Widget
     {
@@ -250,7 +239,6 @@ add_action('widgets_init', 'show_all_posts_tags_widget');
 
 
 
-
 function search_posts_widget()
 {
 
@@ -266,7 +254,6 @@ function search_posts_widget()
                 array('description' => __('Simple widget for search posts by keywords and with redirect to results page', 'wpb_widget_domain'),)
             );
         }
-
 
         public function widget($args, $instance)
         {
@@ -298,7 +285,6 @@ add_action('widgets_init', 'search_posts_widget');
 
 
 
-
 function sm_share_widget()
 {
 
@@ -314,7 +300,6 @@ function sm_share_widget()
                 array('description' => __('Simple widget for share single blog post on social medias', 'wpb_widget_domain'),)
             );
         }
-
 
         public function widget($args, $instance)
         {
