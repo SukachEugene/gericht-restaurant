@@ -61,6 +61,7 @@ $background = get_field('chefs_word_background', 'options');
                 <?php endif ?>
 
                 <div class="section-chefs-word-content-text-container-quote">
+
                     <?php if ($quotes) : ?>
                         <img class="quotes" src="<?php echo $quotes['url']; ?>" alt="<?php echo $quotes['alt']; ?>" title="<?php echo $quotes['title']; ?>">
                     <?php endif; ?>
@@ -81,7 +82,6 @@ $background = get_field('chefs_word_background', 'options');
                 <?php if ($caption) : ?>
                     <img class="section-chefs-word-caption" src="<?php echo $caption['url']; ?>" alt="<?php echo $caption['alt']; ?>" title="<?php echo $qcaption['title']; ?>">
                 <?php endif; ?>
-
 
             </div>
 

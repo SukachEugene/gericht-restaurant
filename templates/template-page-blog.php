@@ -10,7 +10,6 @@ get_header()
 
 <?php get_template_part('templates/block', 'head-banner'); ?>
 
-
 <div class="global-lines about-us-page">
 
     <?php
@@ -34,7 +33,6 @@ get_header()
         if ($logo) : ?>
             <img class="logo top" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" title="<?php echo $logo['title']; ?>">
         <?php endif ?>
-
 
         <div class="container2">
 
@@ -66,7 +64,6 @@ get_header()
         if ($logo) : ?>
             <img class="logo bottom" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" title="<?php echo $logo['title']; ?>">
         <?php endif ?>
-
 
     </section>
 

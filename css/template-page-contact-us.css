@@ -1,17 +1,9 @@
-
-
 /* ----------------- Section Map ----------------- */
 
 .map-container {
-   /* opacity: 0.7; */
-   transition: 1s;
-   border: 2px solid var(--gold);
+    transition: 1s;
+    border: 2px solid var(--gold);
 }
-
-/* .map-container:hover {
-    opacity: 0.9;
- } */
-
 
 .leaflet-control-attribution.leaflet-control {
     display: none;
@@ -58,10 +50,8 @@
 
 .contact-form-input {
     width: 100%;
-
     height: 60px;
     padding: 16px 1vw;
-
     font-family: var(--cormorant);
     font-weight: 600;
     font-size: 16px;
@@ -72,7 +62,6 @@
     color: var(--grey);
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid var(--lightgold);
-
     position: relative;
     margin-bottom: 32px;
 }
@@ -89,8 +78,6 @@
 .contact-form-input:focus {
     outline: 2px solid var(--gold);
 }
-
-
 
 .section-contact-form-content-image-container {
     width: 29vw;
@@ -109,8 +96,7 @@
     bottom: 0;
     left: 0;
     height: 55%;
-} 
-
+}
 
 .contact-form .wpcf7-form-control-wrap {
     position: relative;
@@ -134,7 +120,7 @@
     top: -12px;
 }
 
-.contact-form  .wpcf7-spinner {
+.contact-form .wpcf7-spinner {
     position: absolute;
     margin-top: 8px;
 }
@@ -168,10 +154,9 @@
 
     .map-container {
         opacity: 0.9;
-     }
+    }
 
-
-     .section-contact-form-content {
+    .section-contact-form-content {
         flex-direction: column-reverse;
     }
 
@@ -179,7 +164,7 @@
         width: 100%;
     }
 
-    .section-contact-form-content-image-container{
+    .section-contact-form-content-image-container {
         margin-bottom: 32px;
     }
 
@@ -193,7 +178,6 @@
         margin-left: 10%;
         height: auto;
         max-height: none;
-
     }
 
     .contact-form-submit {
@@ -207,5 +191,3 @@
         padding-left: 10px;
     }
 }
-
-

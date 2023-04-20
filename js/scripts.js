@@ -2,6 +2,7 @@
 
 window.onload = function () {
   addEventListeners();
+
   fixDownloadOfSliderOne();
   makeVideoBannerControlButton();
   makeVideoControlButton();
@@ -21,6 +22,7 @@ window.onload = function () {
   }
 
 }
+
 
 function addEventListeners() {
   if (document.getElementById('scroll-down') != null) {

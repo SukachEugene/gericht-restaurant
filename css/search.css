@@ -1,8 +1,6 @@
-
 .seach-results-page {
     padding-top: calc(var(--header_height) + 40px);
     padding-bottom: 120px;
-
 }
 
 .seach-results-page h1 {
@@ -40,13 +38,11 @@
 .seach-results-page ol li {
     list-style-type: decimal;
     margin-left: 26px;
-  
-  }
+}
 
-  
+
 .seach-results-page ol li::marker {
     text-transform: capitalize;
     font-feature-settings: 'tnum' on, 'lnum' on;
     font-size: 24px;
-  }
-
+}

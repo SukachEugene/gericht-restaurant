@@ -81,7 +81,6 @@ get_header()
                                 </div>
                             </div>
 
-
                             <div class="section-team-content-text-container">
 
                                 <?php if ($name) : ?>
@@ -102,8 +101,6 @@ get_header()
                 endif;
                 ?>
 
-
-
             </div>
 
             <?php
@@ -119,7 +116,6 @@ get_header()
     </div>
 
     <div class="team-page-laurels-container">
-
 
         <section class="section-laurels">
 

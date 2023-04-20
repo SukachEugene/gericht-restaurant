@@ -1,11 +1,6 @@
 
 
-
-
-
-
-// let timer;
-
+// let timer
 self.addEventListener('message', function (e) {
     let { current_month, current_year, seconds, minutes, hours, days, months } = e.data;
 

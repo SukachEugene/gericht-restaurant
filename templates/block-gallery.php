@@ -11,6 +11,7 @@
             $text = get_field('gallery_text', 'options');
             $link = get_field('gallery_link', 'options');
             ?>
+
             <?php if ($header) : ?>
                 <h6><?php echo $header ?></h6>
             <?php endif ?>

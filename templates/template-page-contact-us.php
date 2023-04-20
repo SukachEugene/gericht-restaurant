@@ -10,7 +10,6 @@ get_header()
 
 <?php get_template_part('templates/block', 'head-banner'); ?>
 
-
 <div class="global-lines about-us-page">
 
     <?php
@@ -49,7 +48,6 @@ get_header()
 
     </section>
 
-
     <?php
     $background = get_field('contact_form_background');
     ?>
@@ -77,8 +75,6 @@ get_header()
 
                     <img class="image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" title="<?php echo $image['title']; ?>">
                     <img class="letter" src="<?php echo $letter['url']; ?>" alt="<?php echo $letter['alt']; ?>" title="<?php echo $letter['title']; ?>">
-
-
 
                 </div>
 

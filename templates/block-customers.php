@@ -1,11 +1,15 @@
 <section class="section-customers">
+
     <div class="container">
+
         <div class="section-customers-content-header">
+
             <?php
             $header = get_field('customers_header', 'options');
             $spoon = get_field('spoon', 'options');
             $title = get_field('customers_title', 'options');
             ?>
+
             <?php if ($header) : ?>
                 <h6><?php echo $header ?></h6>
             <?php endif ?>
@@ -69,7 +73,6 @@
                             <?php endif ?>
 
                         </div>
-
                     </div>
 
             <?php
@@ -80,5 +83,5 @@
         </div>
 
     </div>
-    
+
 </section>

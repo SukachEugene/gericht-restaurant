@@ -1,7 +1,4 @@
-
-
 html {
-    /* scroll-behavior: smooth; */
     width: 100%;
     margin: 0;
     padding: 0;
@@ -10,7 +7,7 @@ html {
 }
 
 :root {
-    --black:#0C0C0C;
+    --black: #0C0C0C;
     --other_black: #0C0B08;
     --white: #FFFFFF;
     --other_white: #FAFAFA;
@@ -29,7 +26,7 @@ body {
     text-align: left;
     background-color: var(--black);
     color: var(--white);
-    width: 100%; 
+    width: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -57,8 +54,8 @@ body {
 }
 
 .global-lines {
-position: relative;
-overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
 .through-line {
@@ -136,7 +133,6 @@ h6 {
     background-color: var(--darkgold);
     color: var(--other_black);
     border: 1px solid var(--darkgold);
-
 }
 
 .logo {
@@ -155,7 +151,3 @@ h6 {
     padding: 0 16vw;
     min-width: 68vw;
 }
-
-
-
-

@@ -4,8 +4,6 @@
     z-index: 2;
 }
 
-
-
 .section-reservations .spoon {
     padding: 8px 0;
 }
@@ -22,10 +20,8 @@
     width: 71vw;
     padding: 48px 1.67vw 23px 1.67vw;
     background-color: var(--black);
-
     border: 1px solid rgba(220, 202, 135, 0.2);
     box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.7);
-
 }
 
 .template-reservation-content-form {
@@ -42,8 +38,6 @@
 
 .section-reservations .nf-field-element {
     width: 21.46vw !important;
-    /* height: 32px; */
-
 }
 
 .section-reservations .ninja-forms-field {
@@ -120,8 +114,6 @@
 
 .nf-response-msg {
     position: relative;
-    /* margin-bottom: 30px;
-    margin-top: -30px; */
 }
 
 .nf-response-msg p {
@@ -131,9 +123,9 @@
     transform: translateX(-50%);
 }
 
-/* .template-reservation-content-form {
-    margin-bottom: 30px;
-} */
+
+
+
 
 
 @media screen and (max-width: 1200px) {

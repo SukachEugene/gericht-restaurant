@@ -1,7 +1,5 @@
 /* ----------------- General Page Rules ----------------- */
 
-
-
 .front-page .gallery-container {
     margin-bottom: 113px;
 }
@@ -12,7 +10,6 @@
 
 
 /* ----------------- Head Post's Section ----------------- */
-
 
 .section-head-posts {
     position: relative;
@@ -174,7 +171,6 @@
     align-items: center;
     row-gap: 24px;
     border: none;
-    /* background-color: none; */
     transition: 1s;
 }
 
@@ -191,7 +187,6 @@
     transform: scale(1.1);
 }
 
-
 .slider-one {
     opacity: 0;
     visibility: hidden;
@@ -200,16 +195,16 @@
 
 
 
-/* ----------------- Section Knife ----------------- */
 
+
+
+/* ----------------- Section Knife ----------------- */
 
 .section-knife {
     position: relative;
-    /* height: 100vh; */
     background-size: cover;
     height: calc(100vh - var(--header_height));
     max-height: calc(100vh - var(--header_height));
-
 }
 
 .section-knife .container {
@@ -297,6 +292,7 @@
 
 
 
+
 /* --------------- Section Gallery -------------- */
 
 
@@ -309,6 +305,9 @@
     bottom: -87px;
     left: 5.5vw;
 }
+
+
+
 
 
 
@@ -328,8 +327,6 @@
 
 
 
-
-
 @media screen and (max-width: 1300px) {
 
     .section-head-posts-content-text-container2 {
@@ -345,7 +342,8 @@
         font-size: 18px;
     }
 
-    .section-head-posts-content-text, .section-knife-content-text-container p {
+    .section-head-posts-content-text,
+    .section-knife-content-text-container p {
         font-size: 12px;
     }
 

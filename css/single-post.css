@@ -31,7 +31,6 @@
     line-height: 175%;
     letter-spacing: 0.04em;
     color: var(--other_white);
-
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -53,9 +52,6 @@
     height: max-content;
     min-width: 100%;
     transform: translate(-50%, -50%);
-
-    /* min-width: 100%;
-    min-height: 100%; */
 }
 
 .single-blog-post-content-body {
@@ -74,8 +70,6 @@
     display: flex;
     flex-wrap: wrap;
     column-gap: 16px;
-
-
 }
 
 .single-blog-post-content-bottom-line-tags-container a {
@@ -98,7 +92,6 @@
     display: flex;
     justify-content: space-between;
     column-gap: 32px;
-
     font-family: var(--sans);
     font-style: normal;
     font-weight: 400;
@@ -130,11 +123,6 @@
 .single-blog-post-content-body #video {
     min-height: 140px;
 }
-
-
-
-
-
 
 .comments-section h4 {
     font-style: normal;
@@ -183,7 +171,8 @@
     padding-bottom: 8px;
 }
 
-.comment-content p, .comment-content a {
+.comment-content p,
+.comment-content a {
     font-family: var(--sans);
     font-style: normal;
     font-weight: 400;
@@ -257,11 +246,11 @@
     padding-right: 1.7vw;
 }
 
-.comment-reply-title > a:first-child {
+.comment-reply-title>a:first-child {
     padding-left: 4px;
 }
 
-.comment-reply-title > a:first-child:hover {
+.comment-reply-title>a:first-child:hover {
     color: var(--gold);
 }
 
@@ -288,7 +277,6 @@
     cursor: pointer;
     margin-top: 48px;
 }
-
 
 .create-comment-block {
     position: relative;
@@ -426,7 +414,7 @@
         min-width: 80px;
         margin-right: 12px;
     }
- 
+
     #respond {
         width: 68vw;
     }
@@ -441,7 +429,7 @@
         width: 100%;
         padding: 0;
     }
-    
+
     .text-content-element-in-post h3 {
         width: 100%;
     }
@@ -465,7 +453,7 @@
         margin-bottom: 12px;
     }
 
-    
+
 }
 
 @media screen and (max-width: 400px) {

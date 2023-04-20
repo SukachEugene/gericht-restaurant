@@ -1,8 +1,5 @@
-
-
 <?php
-
-if (isset($_POST['page'])) { 
+if (isset($_POST['page'])) {
     $paged = $_POST['page'];
 } else {
     $paged = 1;
@@ -25,7 +22,7 @@ if ($posts) :
         $author = get_the_author_meta('display_name', $authorID);
         $title = $post->post_title;
         $excerpt = $post->post_excerpt;
-        $excerpt = wp_trim_words( $excerpt, 20, '...' );
+        $excerpt = wp_trim_words($excerpt, 20, '...');
         $link = get_the_permalink($id);
 ?>
         <?php if ($thumbnail) : ?>
@@ -40,7 +37,9 @@ if ($posts) :
                         <p><?php echo $date ?></p>
                         <p><?php echo " - " . $author ?></p>
                     </div>
-                    <a class="blog-title-link" href="<?php echo $link ?>"><h4><?php echo $title ?></h4></a>
+                    <a class="blog-title-link" href="<?php echo $link ?>">
+                        <h4><?php echo $title ?></h4>
+                    </a>
                     <p class="content-text"><?php echo $excerpt ?></p>
                     <a href="<?php echo $link ?>">Read more</a>
                 </div>

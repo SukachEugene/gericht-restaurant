@@ -1,5 +1,3 @@
-
-
 /* ----------------- Search Container ----------------- */
 
 #searchform {
@@ -36,7 +34,7 @@
 }
 
 #searchsubmit:hover {
-transform: scale(1.15);
+    transform: scale(1.15);
 }
 
 
@@ -176,7 +174,8 @@ transform: scale(1.15);
     padding: 0 8px;
 }
 
-.sidebar-widget-one-category-name, .sidebar-widget-one-category-number {
+.sidebar-widget-one-category-name,
+.sidebar-widget-one-category-number {
     font-family: var(--sans);
     font-style: normal;
     font-weight: 400;

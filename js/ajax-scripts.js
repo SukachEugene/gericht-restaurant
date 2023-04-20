@@ -1,25 +1,3 @@
-// console.log(PHPVARS);
-
-
-// jQuery(function($) {
-
-//     let currentPage = 1;
-
-//     $('body').on('click', '#load-more-posts', function() {
-
-//         currentPage++;
-
-//         let data = {
-//             action: 'load_more_posts',
-//             page: currentPage,
-//         };
-//         $.post(PHPVARS.ajaxurl, data, function(response) {
-//             $('#posts-container').append(response);    
-//         });
-//     });
-// });
-
-
 
 //Blog Posts Downloader
 jQuery(function ($) {
