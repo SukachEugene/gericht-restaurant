@@ -41,7 +41,6 @@
 
             </div>
 
-
             <div class="subscribe-form">
                 <?php
                 echo do_shortcode($form);

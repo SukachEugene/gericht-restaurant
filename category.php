@@ -4,17 +4,12 @@ get_header()
 
 
 <?php
-
-
-
 $current_term = get_queried_object();
 $current_slug = $current_term->slug;
 $current_name = $current_term->name;
-
-
 ?>
 
-<h1 class="category-page-title"><?php echo "Posts By Category:</br>".$current_name ?></h1>
+<h1 class="category-page-title"><?php echo "Posts By Category:</br>" . $current_name ?></h1>
 
 <div class="category-page-container">
 
@@ -33,7 +28,6 @@ $current_name = $current_term->name;
 
     $posts = get_posts($args);
 
-
     $posts_per_page = 3;
     $total_posts = count($posts);
     $total_pages = ceil($total_posts / $posts_per_page);
@@ -46,7 +40,6 @@ $current_name = $current_term->name;
 
     $posts_chunked = array_chunk($posts, $posts_per_page);
     $posts_on_current_page = $posts_chunked[$current_page - 1];
-
 
 
     if ($posts_chunked) :
@@ -95,14 +88,13 @@ $current_name = $current_term->name;
 <div class="category-pagination">
     <?php
     for ($i = 1; $i <= $total_pages; $i++) {
-        ?>
+    ?>
         <a href="?page=<?php echo $i ?>"><?php echo $i ?></a>
     <?php
     }
     ?>
 
 </div>
-
 
 
 <?php

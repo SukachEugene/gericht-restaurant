@@ -36,35 +36,20 @@ $background = get_field('background', 'options');
             $spoon = get_field('spoon', 'options');
             $text = get_the_content();
 
-
-            // $point = get_field('time_point');
-            // $date = DateTime::createFromFormat('d/m/Y h:i a', $point);
-
-            // $point_timestamp = $date->getTimestamp();
-            // $remaining_time = $point_timestamp - time();
-
-            // $days = floor($remaining_time / (60 * 60 * 24));
-            // $months = floor($days / 30);
-            // $hours = floor(($remaining_time / (60 * 60)) % 24);
-            // $minutes = floor(($remaining_time / 60) % 60);
-            // $seconds = $remaining_time % 60;
-
-
-
             $start_date = new DateTime();
             $point = get_field('time_point');
             $end_date = DateTime::createFromFormat('d/m/Y h:i a', $point);
             $interval = $start_date->diff($end_date);
 
             if ($start_date < $end_date) {
-            $months = $interval->y * 12 + $interval->m;
-            $days = $interval->d;
-            $hours = $interval->h;
-            $minutes = $interval->i;
-            $seconds = $interval->s;
+                $months = $interval->y * 12 + $interval->m;
+                $days = $interval->d;
+                $hours = $interval->h;
+                $minutes = $interval->i;
+                $seconds = $interval->s;
 
-            $current_year = date('Y');
-            $current_month = date('n');
+                $current_year = date('Y');
+                $current_month = date('n');
             } else {
                 $months = 0;
                 $days = 0;
@@ -72,9 +57,6 @@ $background = get_field('background', 'options');
                 $minutes = 0;
                 $seconds = 0;
             }
-
-
-
             ?>
 
             <?php
@@ -142,6 +124,5 @@ $background = get_field('background', 'options');
     <?php
     get_footer();
     ?>
-
 
 </div>

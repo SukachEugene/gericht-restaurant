@@ -12,7 +12,6 @@ get_header()
 
             <ol>
 
-
                 <?php
                 $s = get_search_query();
 
@@ -22,26 +21,9 @@ get_header()
                     's' => $s,
                     'post_type' => 'post',
                     'posts_per_page' => -1,
-
-                    // 'tax_query' => array(
-                    //     'relation' => 'OR',
-                    //     array(
-                    //         'taxonomy' => 'category',
-                    //         'field'    => 'slug',
-                    //         'terms'    => $s_words,
-                    //     ),
-                    //     array(
-                    //         'taxonomy' => 'tag',
-                    //         'field'    => 'slug',
-                    //         'terms'    => $s_words,
-                    //     ),
-                    // ),
-
                 );
 
-
                 $posts = get_posts($args);
-
 
                 if ($posts) :
 
@@ -66,7 +48,7 @@ get_header()
                     ?>
 
                     <h4 style="text-align: center;">Found nothing</h4>
-                    
+
                 <?php
                 endif;
                 ?>
@@ -76,7 +58,6 @@ get_header()
 
     </div>
 </section>
-
 
 <?php
 get_footer();

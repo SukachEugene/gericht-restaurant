@@ -2,13 +2,14 @@
 /*
 Template Name: Video Block Template
 */
+?>
 
-
+<?php
 if (get_row_layout() == 'video') :
 
     $flag = get_sub_field('resource');
 
-    if ($flag == 'local') {
+    if ($flag == 'local') :
         $video = get_sub_field('video_name');
 ?>
         <div class="video-container single-post">
@@ -27,15 +28,12 @@ if (get_row_layout() == 'video') :
         </div>
 
 <?php
-
-    }
+    endif;
 
     if ($flag == 'external') {
         $video = get_sub_field('link_to_video');
         echo $video;
     }
-
-
 
 endif;
 

@@ -1,4 +1,5 @@
 <?php
+
 if (have_comments()) :
     echo '<ol class="commentlist">';
     wp_list_comments(array(
@@ -17,11 +18,9 @@ $defaults = array(
     'title_reply' => '',
     'title_reply_to' => 'Reply to %s',
     'cancel_reply_link' => 'Cancel Reply'
-
-
-
 );
 ?>
+
 <div class="create-comment-block">
     <h4>Post a Comment</h4>
 

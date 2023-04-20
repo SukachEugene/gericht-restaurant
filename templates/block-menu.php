@@ -94,7 +94,6 @@
                         )
                     ));
 
-
                     if ($menu_positions && $i == 0) {
                 ?>
                         <div class="menu-details-container-positions active">
@@ -174,6 +173,7 @@
                             <a class="gold-button" href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>"> <?php echo  $link['title']; ?> </a>
 
                         <?php endif ?>
+
         </article>
     </div>
 

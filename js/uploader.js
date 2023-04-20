@@ -2,7 +2,6 @@
 
 jQuery(function ($) {
 
-
     $('body').on('click', '#custom-button-upload-banner', function (e) {
         e.preventDefault();
         obj_uploader = wp.media({

@@ -233,12 +233,14 @@ get_header()
 
     <?php get_template_part('templates/block', 'video-banner'); ?>
 
+
     <?php
     $background = get_field('our_laurels_background_image', 'options');
     ?>
+
     <section class="section-laurels" style="background-image: url('<?php echo $background['url']; ?>')">
 
-    <?php get_template_part('templates/block', 'laurels'); ?>
+        <?php get_template_part('templates/block', 'laurels'); ?>
 
     </section>
 

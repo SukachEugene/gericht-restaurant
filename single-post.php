@@ -5,7 +5,6 @@ get_header()
 <?php get_template_part('templates/block', 'head-banner'); ?>
 
 
-
 <div class="global-lines about-us-page">
 
     <?php
@@ -60,7 +59,6 @@ get_header()
                         <img class="logo" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" title="<?php echo $logo['title']; ?>">
                     <?php endif ?>
 
-
                     <div class="single-blog-post-content-body">
 
                         <?php
@@ -68,11 +66,9 @@ get_header()
                         ?>
 
                         <?php
-
                         if (have_rows('flexible_content_blocks')) :
 
                             while (have_rows('flexible_content_blocks')) : the_row();
-
 
                                 get_template_part('flexible/flexible', get_row_layout());
 
@@ -110,19 +106,17 @@ get_header()
                                     <?php endif ?>
                                     <div>Comment</div>
                                 </div>
-                                <div class="one-interactive-element" id="likes-container">
 
+                                <div class="one-interactive-element" id="likes-container">
+                                    <!-- empty by default, element will be here by js script -->
                                 </div>
 
                             </div>
                         </div>
 
-
-
                     </div>
 
                     <?php get_sidebar() ?>
-
 
                 </div>
 
@@ -134,7 +128,6 @@ get_header()
 
                     <h4>Comment(<?php echo $comments_count; ?>)</h4>
 
-
                     <div class="comments-container">
 
                         <?php comments_template(); ?>
@@ -145,7 +138,6 @@ get_header()
                         <img class="logo" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" title="<?php echo $logo['title']; ?>">
                     <?php endif ?>
 
-
                 </div>
 
             </div>
@@ -153,7 +145,6 @@ get_header()
         </div>
 
     </section>
-
 
 
     <?php

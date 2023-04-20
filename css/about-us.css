@@ -1,5 +1,3 @@
-
-
 /* ----------------- Section Our History ----------------- */
 
 .section-our-history {
@@ -159,7 +157,8 @@
 #video {
     width: 100%;
     height: auto;
-    max-height: calc(100vh - var(--header_height));;
+    max-height: calc(100vh - var(--header_height));
+    ;
 }
 
 #play-video-button {
@@ -190,7 +189,6 @@
     bottom: calc(-152px - 2.8vw);
     left: 7.6vw;
 }
-
 
 .global-lines.about-us-page .through-line.left {
     margin-top: 388px;
@@ -229,7 +227,8 @@
         align-items: center;
     }
 
-    .section-our-history-content-columns .left-part, .section-our-history-content-columns .right-part {
+    .section-our-history-content-columns .left-part,
+    .section-our-history-content-columns .right-part {
         width: 75%;
     }
 
@@ -282,7 +281,8 @@
         flex-direction: column;
     }
 
-    .one-goal-container, .goal-divider-container {
+    .one-goal-container,
+    .goal-divider-container {
         width: 100%;
     }
 
@@ -296,14 +296,10 @@
         transform: rotate(-90deg);
         height: 150px;
     }
-    
+
     .section-about-us .video-container {
         width: 100vw;
         margin-left: -16.15vw;
     }
 
-
 }
-
-
-

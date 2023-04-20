@@ -2,17 +2,12 @@
 get_header()
 ?>
 
-
 <?php
-
 $current_term = get_queried_object();
 $current_tag = $current_term->slug;
-
-
-
 ?>
 
-<h1 class="category-page-title"><?php echo "Posts By Tag:</br>".$current_tag ?></h1>
+<h1 class="category-page-title"><?php echo "Posts By Tag:</br>" . $current_tag ?></h1>
 
 <div class="category-page-container">
 
@@ -31,10 +26,9 @@ $current_tag = $current_term->slug;
         ),
         'order' => 'ASC',
 
-        
+
 
     );
-
 
     $posts = get_posts($args);
 
@@ -50,7 +44,6 @@ $current_tag = $current_term->slug;
 
     $posts_chunked = array_chunk($posts, $posts_per_page);
     $posts_on_current_page = $posts_chunked[$current_page - 1];
-
 
 
     if ($posts_chunked) :
@@ -99,14 +92,13 @@ $current_tag = $current_term->slug;
 <div class="category-pagination">
     <?php
     for ($i = 1; $i <= $total_pages; $i++) {
-        ?>
+    ?>
         <a href="?page=<?php echo $i ?>"><?php echo $i ?></a>
     <?php
     }
     ?>
 
 </div>
-
 
 
 <?php

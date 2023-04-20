@@ -13,7 +13,8 @@
 }
 
 
-.single-blog-post-content-body p, .single-blog-post-content-body li  {
+.single-blog-post-content-body p,
+.single-blog-post-content-body li {
     font-family: var(--sans);
     font-style: normal;
     font-weight: 400;
@@ -22,7 +23,6 @@
     letter-spacing: 0.04em;
     color: grey;
 }
-
 
 .single-blog-post-content-body ul {
     display: flex;
@@ -35,7 +35,7 @@
 
 .single-blog-post-content-body ul li::marker {
     content: '\2014\00a0\00a0';
-    color: var(--gold);   
+    color: var(--gold);
 }
 
 .quote-container {
@@ -91,7 +91,8 @@
     padding-right: 5%;
 }
 
-.post-content-image-left img, .post-content-image-right img {
+.post-content-image-left img,
+.post-content-image-right img {
     width: 100%;
 }
 
@@ -103,4 +104,3 @@
 .single-blog-post-content-body iframe {
     width: 100%;
 }
-

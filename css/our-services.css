@@ -37,8 +37,8 @@
 
 
 
-/* ----------------- Section Happy Hours ----------------- */
 
+/* ----------------- Section Happy Hours ----------------- */
 
 .section-happy-hours {
     height: calc(100vh - var(--header_height));
@@ -105,8 +105,10 @@
 
 
 
-/* ----------------- Responsibility ----------------- */
 
+
+
+/* ----------------- Responsibility ----------------- */
 
 @media screen and (max-width: 700px) {
 

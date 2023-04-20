@@ -2,8 +2,9 @@
 /*
 Template Name: Text Block Template
 */
+?>
 
-
+<?php
 if (get_row_layout() == 'text') :
 
     $content = get_sub_field('content');
@@ -18,5 +19,4 @@ if (get_row_layout() == 'text') :
     }
 
 endif;
-
 ?>

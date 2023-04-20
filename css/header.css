@@ -1,6 +1,5 @@
 header {
     position: fixed;
-    /* top: 0; */
     z-index: 1000;
     background-color: var(--black);
     height: var(--header_height);
@@ -22,7 +21,6 @@ header h4 {
     letter-spacing: 0.04em;
     text-align: center;
     padding: 32px 0;
-
 }
 
 .menu-header-menu-container {
@@ -49,7 +47,6 @@ header a {
     line-height: 28px;
     letter-spacing: 0.04em;
     text-align: left;
-    /* transition: 1s; */
 }
 
 .header-elements-right-part {
@@ -80,7 +77,6 @@ header a {
 .header-elements-right-part button {
     padding-right: 2.6vw;
     border-right: 1px solid var(--white);
-    /* transition: 1s; */
 }
 
 .header-elements-right-part a {
@@ -167,7 +163,7 @@ header button:hover {
         flex-direction: column;
         gap: 12px
     }
-    
+
 
     header {
         overflow: none;

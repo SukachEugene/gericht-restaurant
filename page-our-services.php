@@ -2,9 +2,7 @@
 get_header()
 ?>
 
-
 <?php get_template_part('templates/block', 'head-banner'); ?>
-
 
 <div class="global-lines services-page">
 
@@ -23,6 +21,7 @@ get_header()
 
 
     <section class="section-serving-quality">
+
         <?php
         $header = get_field('serving_quality_header');
         $spoon = get_field('spoon', 'options');
@@ -74,7 +73,6 @@ get_header()
     <?php get_template_part('templates/block', 'reservations'); ?>
 
 
-
     <?php
     $background = get_field('harry_hours_background');
     $title = get_field('harry_hours_title');
@@ -90,9 +88,11 @@ get_header()
         <?php endif ?>
 
         <div>
+
             <?php if ($title) : ?>
                 <h2><?php echo $title ?></h2>
             <?php endif ?>
+
             <div class="section-happy-hours-text">
                 <?php if ($days) : ?>
                     <p><?php echo $days ?></p>
@@ -101,6 +101,7 @@ get_header()
                     <p>&nbsp;<?php echo $hours ?></p>
                 <?php endif ?>
             </div>
+
         </div>
 
         <?php

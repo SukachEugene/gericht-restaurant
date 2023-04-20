@@ -10,7 +10,6 @@ get_header()
 
 <?php get_template_part('templates/block', 'head-banner'); ?>
 
-
 <div class="global-lines faq-page">
     <?php
     $left_line = get_field('through_line_left', 'options');
@@ -46,7 +45,6 @@ get_header()
                         <img class="section-faq-image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" title="<?php echo $image['title']; ?>">
                     </div>
                 <?php endif ?>
-
 
                 <div class="faq-elements-container">
                     <?php
